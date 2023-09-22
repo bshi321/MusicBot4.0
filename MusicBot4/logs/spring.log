@@ -1,0 +1,439 @@
+2023-08-01 00:36:27.268  INFO 33112 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            17.0.1
+	Lavaplayer      1.3.96-original
+
+2023-08-01 00:36:27.318  INFO 33112 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.8.RELEASE)
+
+
+2023-08-01 00:36:27.397  INFO 33112 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-JB2I1AD with PID 33112 (E:\Visual Studio Projects\source\MusicBot4\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4\MusicBot4)
+2023-08-01 00:36:27.398  INFO 33112 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2023-08-01 00:36:28.610  WARN 33112 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-08-01 00:36:28.629  INFO 33112 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-08-01 00:36:28.630  INFO 33112 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1197 ms
+2023-08-01 00:36:28.891  WARN 33112 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-08-01 00:36:29.244  INFO 33112 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-08-01 00:36:29.519  INFO 33112 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2023-08-01 00:36:29.519  WARN 33112 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2023-08-01 00:36:29.726  INFO 33112 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-01 00:36:30.021  INFO 33112 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2023-08-01 00:36:30.033  INFO 33112 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-08-01 00:36:30.108  INFO 33112 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2023-08-01 00:36:30.111  INFO 33112 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.301 seconds (JVM running for 5.382)
+2023-08-01 00:36:30.112  INFO 33112 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-08-01 00:45:20.017  INFO 33112 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-01 00:45:20.018  INFO 33112 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-01 00:45:20.025  INFO 33112 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-08-01 00:45:20.042  INFO 33112 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55445
+2023-08-01 00:45:20.104  INFO 33112 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 00:45:20.179  INFO 33112 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"key":"97e22880cbc04d9ab9931ce06d1d6fdb","timeout":60,"op":"configureResuming"}
+2023-08-01 00:45:41.419  INFO 33112 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55445 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 97e22880cbc04d9ab9931ce06d1d6fdb
+2023-08-01 00:46:41.432  INFO 33112 --- [pool-2-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 00:47:26.230  INFO 33112 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55630
+2023-08-01 00:47:26.233  INFO 33112 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 00:47:26.284  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"key":"da4b7ef6edf4415db52ee09377aa69c2","timeout":60,"op":"configureResuming"}
+2023-08-01 00:48:18.704  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 00:48:18.763  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"790ea6907531495ac08c750df3ca286c","event":{"token":"0e5fa4215b5c150a","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 00:48:20.766  INFO 33112 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=a51VH9BYzZA"
+2023-08-01 00:48:21.347 ERROR 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: This video is unavailable
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.checkPlayabilityStatus(DefaultYoutubeTrackDetailsLoader.java:107) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadBaseResponse(DefaultYoutubeTrackDetailsLoader.java:74) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.load(DefaultYoutubeTrackDetailsLoader.java:53) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadDetails(DefaultYoutubeTrackDetailsLoader.java:38) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadTrackWithVideoId(YoutubeAudioSourceManager.java:208) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:232) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:228) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromUrlWithVideoId(DefaultYoutubeLinkRouter.java:99) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromMainDomain(DefaultYoutubeLinkRouter.java:64) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:42) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.96-original
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 17.0.1
+  java.runtime.version: 17.0.1+12-LTS-39
+  java.vm.version: 17.0.1+12-LTS-39
+
+2023-08-01 00:48:21.349 ERROR 33112 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: This video is unavailable
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.checkPlayabilityStatus(DefaultYoutubeTrackDetailsLoader.java:107) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadBaseResponse(DefaultYoutubeTrackDetailsLoader.java:74) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.load(DefaultYoutubeTrackDetailsLoader.java:53) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadDetails(DefaultYoutubeTrackDetailsLoader.java:38) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadTrackWithVideoId(YoutubeAudioSourceManager.java:208) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:232) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:228) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromUrlWithVideoId(DefaultYoutubeLinkRouter.java:99) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromMainDomain(DefaultYoutubeLinkRouter.java:64) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:42) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.96-original
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 17.0.1
+  java.runtime.version: 17.0.1+12-LTS-39
+  java.vm.version: 17.0.1+12-LTS-39
+
+2023-08-01 00:48:25.519  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 00:48:25.521  INFO 33112 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=a51VH9BYzZA"
+2023-08-01 00:48:25.605 ERROR 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: This video is unavailable
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.checkPlayabilityStatus(DefaultYoutubeTrackDetailsLoader.java:107) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadBaseResponse(DefaultYoutubeTrackDetailsLoader.java:74) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.load(DefaultYoutubeTrackDetailsLoader.java:53) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadDetails(DefaultYoutubeTrackDetailsLoader.java:38) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadTrackWithVideoId(YoutubeAudioSourceManager.java:208) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:232) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:228) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromUrlWithVideoId(DefaultYoutubeLinkRouter.java:99) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromMainDomain(DefaultYoutubeLinkRouter.java:64) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:42) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.96-original
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 17.0.1
+  java.runtime.version: 17.0.1+12-LTS-39
+  java.vm.version: 17.0.1+12-LTS-39
+
+2023-08-01 00:48:25.607 ERROR 33112 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: This video is unavailable
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.checkPlayabilityStatus(DefaultYoutubeTrackDetailsLoader.java:107) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadBaseResponse(DefaultYoutubeTrackDetailsLoader.java:74) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.load(DefaultYoutubeTrackDetailsLoader.java:53) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadDetails(DefaultYoutubeTrackDetailsLoader.java:38) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadTrackWithVideoId(YoutubeAudioSourceManager.java:208) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:232) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:228) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromUrlWithVideoId(DefaultYoutubeLinkRouter.java:99) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromMainDomain(DefaultYoutubeLinkRouter.java:64) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:42) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.96-original
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 17.0.1
+  java.runtime.version: 17.0.1+12-LTS-39
+  java.vm.version: 17.0.1+12-LTS-39
+
+2023-08-01 00:48:30.454  INFO 33112 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Stellar Stellar"
+2023-08-01 00:48:30.833  INFO 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Stellar Stellar
+2023-08-01 00:48:30.859  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 00:48:31.009  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 00:48:50.558  INFO 33112 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:stellar stellar"
+2023-08-01 00:48:50.877  INFO 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: stellar stellar
+2023-08-01 00:48:50.888  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 00:48:50.968  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 00:48:55.373  INFO 33112 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:asd"
+2023-08-01 00:48:55.726  INFO 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : No matches found
+2023-08-01 00:48:57.998  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"destroy"}
+2023-08-01 00:49:22.437  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 00:49:22.439  INFO 33112 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=tPNEyBbSlbg"
+2023-08-01 00:49:22.524  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"790ea6907531495ac08c750df3ca286c","event":{"token":"0e435bf88ba21e37","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 00:49:22.523 ERROR 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Load failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: This video is unavailable
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.checkPlayabilityStatus(DefaultYoutubeTrackDetailsLoader.java:107) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadBaseResponse(DefaultYoutubeTrackDetailsLoader.java:74) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.load(DefaultYoutubeTrackDetailsLoader.java:53) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadDetails(DefaultYoutubeTrackDetailsLoader.java:38) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadTrackWithVideoId(YoutubeAudioSourceManager.java:208) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:232) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:228) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromUrlWithVideoId(DefaultYoutubeLinkRouter.java:99) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromMainDomain(DefaultYoutubeLinkRouter.java:64) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:42) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.96-original
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 17.0.1
+  java.runtime.version: 17.0.1+12-LTS-39
+  java.vm.version: 17.0.1+12-LTS-39
+
+2023-08-01 00:49:22.526 ERROR 33112 --- [lava-daemon-pool-info-loader-2-thread-1] l.server.player.AudioLoaderRestHandler   : Track loading failed
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: This video is unavailable
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.checkPlayabilityStatus(DefaultYoutubeTrackDetailsLoader.java:107) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadBaseResponse(DefaultYoutubeTrackDetailsLoader.java:74) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.load(DefaultYoutubeTrackDetailsLoader.java:53) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeTrackDetailsLoader.loadDetails(DefaultYoutubeTrackDetailsLoader.java:38) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadTrackWithVideoId(YoutubeAudioSourceManager.java:208) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:232) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager$LoadingRoutes.track(YoutubeAudioSourceManager.java:228) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromUrlWithVideoId(DefaultYoutubeLinkRouter.java:99) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.routeFromMainDomain(DefaultYoutubeLinkRouter.java:64) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.DefaultYoutubeLinkRouter.route(DefaultYoutubeLinkRouter.java:42) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItemOnce(YoutubeAudioSourceManager.java:196) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioSourceManager.loadItem(YoutubeAudioSourceManager.java:131) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItemOnce(DefaultAudioPlayerManager.java:436) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.checkSourcesForItem(DefaultAudioPlayerManager.java:418) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$createItemLoader$0(DefaultAudioPlayerManager.java:217) ~[lavaplayer-fork-1.3.96.jar!/:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.96-original
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Oracle Corporation
+  java.version: 17.0.1
+  java.runtime.version: 17.0.1+12-LTS-39
+  java.vm.version: 17.0.1+12-LTS-39
+
+2023-08-01 00:49:36.394  INFO 33112 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55630 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key da4b7ef6edf4415db52ee09377aa69c2
+2023-08-01 00:50:36.406  INFO 33112 --- [pool-3-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 00:50:37.947  INFO 33112 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55916
+2023-08-01 00:50:37.951  INFO 33112 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 00:50:38.005  INFO 33112 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"key":"11f63e30524949869351c1361b7ceb5b","timeout":60,"op":"configureResuming"}
+2023-08-01 00:50:43.289  INFO 33112 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"790ea6907531495ac08c750df3ca286c","event":{"token":"0e435bf88ba21e37","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 00:50:45.284  INFO 33112 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:stellar stellar"
+2023-08-01 00:50:45.597  INFO 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: stellar stellar
+2023-08-01 00:50:45.645  INFO 33112 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 00:50:59.662  INFO 33112 --- [XNIO-1 I/O-8] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55916 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 11f63e30524949869351c1361b7ceb5b
+2023-08-01 00:51:59.670  INFO 33112 --- [pool-4-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 00:54:11.748  INFO 33112 --- [XNIO-1 task-18] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56217
+2023-08-01 00:54:11.751  INFO 33112 --- [XNIO-1 task-18] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 00:54:11.804  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"eed625e0317046ce814384f94f0dbdb6","timeout":60,"op":"configureResuming"}
+2023-08-01 00:54:17.267  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"23823ff8f6518e5b6367581a3d007c02","event":{"token":"e467ff229e53f1d4","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 00:54:19.231  INFO 33112 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:stellar stellar"
+2023-08-01 00:54:19.565  INFO 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: stellar stellar
+2023-08-01 00:54:19.605  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 00:54:19.705  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 00:54:39.669  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56217 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key eed625e0317046ce814384f94f0dbdb6
+2023-08-01 00:55:39.684  INFO 33112 --- [pool-5-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 00:58:39.554  INFO 33112 --- [XNIO-1 task-21] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56649
+2023-08-01 00:58:39.558  INFO 33112 --- [XNIO-1 task-21] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 00:58:39.614  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"1fe05375810b4ab1a0538b5af9cffad0","timeout":60,"op":"configureResuming"}
+2023-08-01 00:58:47.233  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"871ba8e12369a045f757ab0a64542c7d","event":{"token":"89fc82f2cb99bf74","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 00:58:49.213  INFO 33112 --- [XNIO-1 task-22] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:stellar stellar"
+2023-08-01 00:58:49.610  INFO 33112 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: stellar stellar
+2023-08-01 00:58:49.656  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 00:58:49.794  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 00:59:05.242  INFO 33112 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56649 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 1fe05375810b4ab1a0538b5af9cffad0
+2023-08-01 00:59:09.743  INFO 33112 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-01 00:59:09.745  INFO 33112 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-08-01 00:59:09.749  INFO 33112 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-01 00:59:43.918  INFO 36952 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            17.0.1
+	Lavaplayer      1.3.96-original
+
+2023-08-01 00:59:43.950  INFO 36952 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.8.RELEASE)
+
+
+2023-08-01 00:59:44.048  INFO 36952 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-JB2I1AD with PID 36952 (E:\Visual Studio Projects\source\MusicBot4\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4\MusicBot4)
+2023-08-01 00:59:44.049  INFO 36952 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2023-08-01 00:59:44.127  WARN 36952 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-08-01 00:59:45.003  WARN 36952 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2023-08-01 00:59:45.025  INFO 36952 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2023-08-01 00:59:45.026  INFO 36952 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 927 ms
+2023-08-01 00:59:45.342  WARN 36952 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2023-08-01 00:59:45.562  INFO 36952 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2023-08-01 00:59:45.795  INFO 36952 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2023-08-01 00:59:45.796  WARN 36952 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2023-08-01 00:59:46.052  INFO 36952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2023-08-01 00:59:46.315  INFO 36952 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2023-08-01 00:59:46.324  INFO 36952 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2023-08-01 00:59:46.400  INFO 36952 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2023-08-01 00:59:46.404  INFO 36952 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.903 seconds (JVM running for 3.273)
+2023-08-01 00:59:46.406  INFO 36952 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2023-08-01 01:00:34.044  INFO 36952 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-01 01:00:34.045  INFO 36952 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-01 01:00:34.049  INFO 36952 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-08-01 01:00:34.066  INFO 36952 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56855
+2023-08-01 01:00:34.117  INFO 36952 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:00:34.155  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"key":"95ab18fc47a940ae826caf5aec81a2e3","timeout":60,"op":"configureResuming"}
+2023-08-01 01:00:53.281  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"1dccd740d475596826fe3c6a7bb75f0f","event":{"token":"3009680c164f5282","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:00:55.252  INFO 36952 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Stellar Stellar"
+2023-08-01 01:00:55.799  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Stellar Stellar
+2023-08-01 01:00:55.854  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 01:00:56.229  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 01:01:05.964  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56855 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 95ab18fc47a940ae826caf5aec81a2e3
+2023-08-01 01:01:44.149  INFO 36952 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56967
+2023-08-01 01:01:44.153  INFO 36952 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:01:44.202  INFO 36952 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"key":"c359687fe13649ea88ba53e3b760f321","timeout":60,"op":"configureResuming"}
+2023-08-01 01:01:51.382  INFO 36952 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"1dccd740d475596826fe3c6a7bb75f0f","event":{"token":"3009680c164f5282","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:01:53.347  INFO 36952 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:bad apple"
+2023-08-01 01:01:53.681  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: bad apple
+2023-08-01 01:01:53.722  INFO 36952 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAmgIAMkJhZCBBcHBsZSBQbGF5ZWQgQnkgU3Rha2VzIEluIFRlYXJzIG9mIHRoZSBLaW5nZG9tAA5CZW50aG92ZW5NdXNpYwAAAAAAAJxAAAtlQXhoaWQwT1ZIZwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWVBeGhpZDBPVkhnAAd5b3V0dWJlAAAAAAAAAAA=","op":"play"}
+2023-08-01 01:02:05.979  INFO 36952 --- [pool-1-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:03:37.436  INFO 36952 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:bad apple touhou"
+2023-08-01 01:03:37.745  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: bad apple touhou
+2023-08-01 01:03:59.045  INFO 36952 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56967 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key c359687fe13649ea88ba53e3b760f321
+2023-08-01 01:04:59.057  INFO 36952 --- [pool-2-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:05:05.505  INFO 36952 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57266
+2023-08-01 01:05:05.509  INFO 36952 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:05:05.565  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"key":"d1618487ae51414a8eb58b826bc284cf","timeout":60,"op":"configureResuming"}
+2023-08-01 01:05:07.851  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"e2c6b50b67b30ee4aa4881a267e3c644","event":{"token":"3009680c164f5282","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:05:09.798  INFO 36952 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:bad apple touhou"
+2023-08-01 01:05:10.085  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: bad apple touhou
+2023-08-01 01:05:10.128  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlAIAL1tIRF0gVG91aG91IC0gQmFkIEFwcGxlISEgW\u002B\u002B8sO\u002B8tl0gKFNoYWRvdyBBcnQpAAtTdWlrYSBJYnVraQAAAAAAA1tgAAtVa2dLOGVVZHBBbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVVrZ0s4ZVVkcEFvAAd5b3V0dWJlAAAAAAAAAAA=","op":"play"}
+2023-08-01 01:05:26.406  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57266 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key d1618487ae51414a8eb58b826bc284cf
+2023-08-01 01:05:55.225  INFO 36952 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57341
+2023-08-01 01:05:55.228  INFO 36952 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:05:55.291  INFO 36952 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"key":"91f4770db14946a0a350ea1ef9858e71","timeout":60,"op":"configureResuming"}
+2023-08-01 01:06:00.956  INFO 36952 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"e51332b7881a4b6469bd4f0f2283c8c4","event":{"token":"3009680c164f5282","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:06:02.930  INFO 36952 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:bad apple touhou"
+2023-08-01 01:06:03.246  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: bad apple touhou
+2023-08-01 01:06:03.287  INFO 36952 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlAIAL1tIRF0gVG91aG91IC0gQmFkIEFwcGxlISEgW\u002B\u002B8sO\u002B8tl0gKFNoYWRvdyBBcnQpAAtTdWlrYSBJYnVraQAAAAAAA1tgAAtVa2dLOGVVZHBBbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVVrZ0s4ZVVkcEFvAAd5b3V0dWJlAAAAAAAAAAA=","op":"play"}
+2023-08-01 01:06:18.018  INFO 36952 --- [XNIO-1 I/O-5] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57341 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 91f4770db14946a0a350ea1ef9858e71
+2023-08-01 01:06:26.414  INFO 36952 --- [pool-3-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:07:18.019  INFO 36952 --- [pool-4-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:09:12.600  INFO 36952 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57645
+2023-08-01 01:09:12.603  INFO 36952 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:09:12.645  INFO 36952 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"key":"757f37edad9f4fa288150411e76bb599","timeout":60,"op":"configureResuming"}
+2023-08-01 01:09:21.921  INFO 36952 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"aa5542ce62c9a002944e14f2ed1908b9","event":{"token":"f2ccfc8a264f3bac","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:09:23.889  INFO 36952 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:stellar stellar"
+2023-08-01 01:09:24.235  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: stellar stellar
+2023-08-01 01:09:24.275  INFO 36952 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 01:09:24.376  INFO 36952 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","op":"stop"}
+2023-08-01 01:09:37.348  INFO 36952 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57645 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 757f37edad9f4fa288150411e76bb599
+2023-08-01 01:10:10.893  INFO 36952 --- [XNIO-1 task-18] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57726
+2023-08-01 01:10:10.896  INFO 36952 --- [XNIO-1 task-18] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:10:10.939  INFO 36952 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"key":"8254a36fb97a4f68beea5a0e2255e626","timeout":60,"op":"configureResuming"}
+2023-08-01 01:10:14.138  INFO 36952 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"aa5542ce62c9a002944e14f2ed1908b9","event":{"token":"f2ccfc8a264f3bac","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:10:16.100  INFO 36952 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:stellar stellar"
+2023-08-01 01:10:16.403  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: stellar stellar
+2023-08-01 01:10:16.444  INFO 36952 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAlgIALlN0ZWxsYXIgU3RlbGxhciAvIOaYn\u002Bihl\u002BOBmeOBhOOBm\u002BOBhChvZmZpY2lhbCkADlN1aXNlaSBDaGFubmVsAAAAAAAEp2gAC2E1MVZIOUJZelpBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9YTUxVkg5Qll6WkEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 01:10:27.682  INFO 36952 --- [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57726 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 8254a36fb97a4f68beea5a0e2255e626
+2023-08-01 01:10:37.362  INFO 36952 --- [pool-5-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:10:45.653  INFO 36952 --- [XNIO-1 task-21] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57779
+2023-08-01 01:10:45.656  INFO 36952 --- [XNIO-1 task-21] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:10:45.701  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"key":"4f6146cf04124a2083c06fe65f76b4d2","timeout":60,"op":"configureResuming"}
+2023-08-01 01:10:51.681  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","sessionId":"b6cc265ff5f6dc1655da01da30b05f30","event":{"token":"f2ccfc8a264f3bac","guild_id":926987371549950012,"endpoint":"newark842.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:10:53.650  INFO 36952 --- [XNIO-1 task-22] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:japanese rbuh"
+2023-08-01 01:10:53.941  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: japanese rbuh
+2023-08-01 01:10:53.982  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"926987371549950012","track":"QAAAewIAHUphcGFuZXNlIEJydWggU291bmQgRWZmZWN0ICMyAARXaWxsAAAAAAAALuAACzhFR2xpR1dmdU5JAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9OEVHbGlHV2Z1TkkAB3lvdXR1YmUAAAAAAAAAAA==","op":"play"}
+2023-08-01 01:11:12.732  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57779 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 4f6146cf04124a2083c06fe65f76b4d2
+2023-08-01 01:11:27.693  INFO 36952 --- [pool-6-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:12:12.747  INFO 36952 --- [pool-7-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:13:20.269  INFO 36952 --- [XNIO-1 task-24] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58024
+2023-08-01 01:13:20.272  INFO 36952 --- [XNIO-1 task-24] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:13:20.315  INFO 36952 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"key":"f5006396e2dc45279fa905369f54b0f9","timeout":60,"op":"configureResuming"}
+2023-08-01 01:13:28.105  INFO 36952 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:58024 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key f5006396e2dc45279fa905369f54b0f9
+2023-08-01 01:14:28.111  INFO 36952 --- [pool-8-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:15:05.845  INFO 36952 --- [XNIO-1 task-25] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58190
+2023-08-01 01:15:05.848  INFO 36952 --- [XNIO-1 task-25] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:15:05.893  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"key":"a85481f1706840a6ab130b80523e1fee","timeout":60,"op":"configureResuming"}
+2023-08-01 01:15:08.817  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"375736934137593857","sessionId":"ad9851d78311c20889a48e02c8b64441","event":{"token":"7999e1d341e98e3e","guild_id":375736934137593857,"endpoint":"newark435.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:15:10.780  INFO 36952 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:bruh"
+2023-08-01 01:15:11.155  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: bruh
+2023-08-01 01:15:11.187  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"375736934137593857","track":"QAAAlwIAKldFTENPTUUgVE8gTUNET05BTERTIEJSVUggKEFuaW1hdGlvbiBNZW1lKQATTnV0c2hlbGwgQW5pbWF0aW9ucwAAAAAAAHFIAAt6MWY4ZzlxVV9ncwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXoxZjhnOXFVX2dzAAd5b3V0dWJlAAAAAAAAAAA=","op":"play"}
+2023-08-01 01:15:11.326  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"guildId":"375736934137593857","op":"stop"}
+2023-08-01 01:15:22.384  INFO 36952 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:58190 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key a85481f1706840a6ab130b80523e1fee
+2023-08-01 01:15:34.377  INFO 36952 --- [XNIO-1 task-28] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:58235
+2023-08-01 01:15:34.380  INFO 36952 --- [XNIO-1 task-28] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET
+2023-08-01 01:15:34.424  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"key":"701ab4de5430446b98c0a3c258988499","timeout":60,"op":"configureResuming"}
+2023-08-01 01:15:36.356  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"375736934137593857","sessionId":"ad9851d78311c20889a48e02c8b64441","event":{"token":"7999e1d341e98e3e","guild_id":375736934137593857,"endpoint":"newark435.discord.media:443"},"op":"voiceUpdate"}
+2023-08-01 01:15:38.344  INFO 36952 --- [XNIO-1 task-29] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:bruh"
+2023-08-01 01:15:38.667  INFO 36952 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: bruh
+2023-08-01 01:15:38.697  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : {"guildId":"375736934137593857","track":"QAAAkQIAK0pvcmR5biBKb25lcyAtIEJSVUghIChPZmZpY2lhbCBNdXNpYyBWaWRlbykADEpvcmR5biBKb25lcwAAAAAAA19IAAttdFdXbzFhYzFZdwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PW10V1dvMWFjMVl3AAd5b3V0dWJlAAAAAAAAAAA=","op":"play"}
+2023-08-01 01:16:02.535  INFO 36952 --- [XNIO-1 I/O-11] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:58235 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60 seconds with key 701ab4de5430446b98c0a3c258988499
+2023-08-01 01:16:22.394  INFO 36952 --- [pool-9-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:17:02.544  INFO 36952 --- [pool-10-thread-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2023-08-01 01:23:30.271  INFO 36952 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2023-08-01 01:23:30.272  INFO 36952 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2023-08-01 01:23:30.274  INFO 36952 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'

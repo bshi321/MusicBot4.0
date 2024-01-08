@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using DiscordDb.Models;
 namespace DiscordDb.DataAccess;
-
+//"mongodb+srv://isliceurrice:music@musicbotcluster.efyarm6.mongodb.net/?retryWrites=true&w=majority"
 public class DataAccess
 {
     private const string ConnectionString = "mongodb://127.0.0.1:27017";

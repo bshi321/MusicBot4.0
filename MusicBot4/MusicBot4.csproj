@@ -8,13 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DSharpPlus" Version="5.0.0-nightly-01669" />
-    <PackageReference Include="DSharpPlus.CommandsNext" Version="5.0.0-nightly-01669" />
-    <PackageReference Include="DSharpPlus.Interactivity" Version="5.0.0-nightly-01669" />
-    <PackageReference Include="DSharpPlus.Rest" Version="5.0.0-nightly-01669" />
-    <PackageReference Include="Lavalink4NET" Version="3.0.1" />
-    <PackageReference Include="Lavalink4NET.DSharpPlus" Version="3.0.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0-preview.6.23329.7" />
+    <PackageReference Include="DSharpPlus" Version="5.0.0-nightly-01619" />
+    <PackageReference Include="DSharpPlus.CommandsNext" Version="5.0.0-nightly-01619" />
+    <PackageReference Include="DSharpPlus.Interactivity" Version="5.0.0-nightly-01619" />
+    <PackageReference Include="DSharpPlus.Rest" Version="5.0.0-nightly-01619" />
+    <PackageReference Include="Lavalink4NET" Version="4.0.0-beta.3-6" />
+    <PackageReference Include="Lavalink4NET.Abstractions" Version="4.0.0-beta.3-6" />
+    <PackageReference Include="Lavalink4NET.DSharpPlus" Version="4.0.0-beta.3-6" />
+    <PackageReference Include="Lavalink4NET.InactivityTracking" Version="4.0.0-beta.3-6" />
+    <PackageReference Include="Lavalink4NET.Protocol" Version="4.0.0-beta.3-6" />
+    <PackageReference Include="Lavalink4NET.Rest" Version="4.0.0-beta.3-6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     <PackageReference Include="TenorSharp" Version="1.6.4" />
 	  
   </ItemGroup>

@@ -90,7 +90,7 @@ public class AdminCommands : BaseCommandModule
         return;
     }
     
-    [Command]
+   /* [Command]
     public async Task gif(CommandContext ctx)
     {
         await ctx.RespondAsync("Type !gif [What you want to search]");
@@ -121,7 +121,7 @@ public class AdminCommands : BaseCommandModule
         await ctx.Channel.SendMessageAsync(gif.ItemUrl.OriginalString);
         return;
     }
-
+   */
     [Command]
 
     public async Task wipe(CommandContext ctx)
@@ -134,15 +134,15 @@ public class AdminCommands : BaseCommandModule
         var msg = ctx.Channel.GetMessagesAsync(150).Result;
         await Task.Delay(1000);
         await ctx.Channel.SendMessageAsync("Deleting Messages...");
-        for(int i = 0; i < msg.Count; i++)
+        for (int i = 0; i < msg.Count; i++)
         {
             if (msg[i].Author.Id == 924375553090408488)
             {
-                
+
                 await msg[i].DeleteAsync();
-                await Task.Delay(250); 
+                await Task.Delay(250);
             }
-            
+
         }
         await ctx.Channel.SendMessageAsync("Finished Deleting Messages. <@550540315220770839>");
         return;

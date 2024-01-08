@@ -1,20 +1,31 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using global::DSharpPlus;
 using global::DSharpPlus.CommandsNext;
 using Lavalink4NET;
-using Lavalink4NET.Tracking;
 using Microsoft.Extensions.DependencyInjection;
-using TenorSharp;
 using DiscordDb.Models;
 using DiscordDb.DataAccess;
+using DSharpPlus.Entities;
+using Lavalink4NET.Rest.Entities.Tracks;
+using Lavalink4NET.DSharpPlus;
+using Lavalink4NET.Extensions;
+using Lavalink4NET.Events;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using DSharpPlus.AsyncEvents;
+using DSharpPlus.EventArgs;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Extensions;
 using DSharpPlus.Interactivity.EventHandling;
 using DSharpPlus.Interactivity.Enums;
-using DSharpPlus.Entities;
+using DSharpPlus.Exceptions;
+using DSharpPlus.Net;
 using Lavalink4NET.Rest;
-using Lavalink4NET.DSharpPlus;
+using Lavalink4NET.Protocol;
+
+
 
 public class Programs
 {
@@ -23,58 +34,53 @@ public class Programs
 
         RunAsync().GetAwaiter().GetResult();
     }
+
     private static ServiceProvider BuildServiceProvider() => new ServiceCollection()
         .AddSingleton<DiscordClient>()
         .AddSingleton(new DiscordConfiguration
         {
-            Token = "API_Key",
+            Token = "DISCORD_API",
             TokenType = TokenType.Bot,
-            Intents = DiscordIntents.AllUnprivileged | DiscordIntents.MessageContents |DiscordIntents.GuildVoiceStates,
+            Intents = DiscordIntents.AllUnprivileged | DiscordIntents.MessageContents | DiscordIntents.GuildVoiceStates,
             MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug
         })
-        .AddSingleton<IDiscordClientWrapper, DiscordClientWrapper>()
-        .AddSingleton<IAudioService, LavalinkNode>()
-        .AddSingleton(new LavalinkNodeOptions
+        .AddLavalink()
+        .ConfigureLavalink(config =>
         {
-            RestUri = "http://localhost:2333/",
-            WebSocketUri = "ws://localhost:2333/",
-            Password = "youshallnotpass",
-            
-        })
-        .AddSingleton<InactivityTrackingOptions>()
-        .AddSingleton<InactivityTrackingService>()
-        .AddSingleton<TenorClient>()
-        .AddSingleton(new TenorConfiguration
-        {
-            ApiKey = "API_Key",  
+            config.BaseAddress = new Uri("http://localhost:2333");
+            config.Passphrase = "youshallnotpass";
+            config.ReadyTimeout = TimeSpan.FromSeconds(30);
+            config.ResumptionOptions = new LavalinkSessionResumptionOptions(TimeSpan.FromSeconds(60));
+            config.HttpClientName = "LavalinkHttpClient";
         })
         .BuildServiceProvider();
-    public static TenorClient tenor = BuildServiceProvider().GetRequiredService<TenorClient>();
+
     public static Random rand = new Random();
     public static DataAccess db = new DataAccess();
+
     static async Task RunAsync()
     {
-
+        // connect to discord gateway and initialize node connection
         var provider = BuildServiceProvider();
         var discord = provider.GetRequiredService<DiscordClient>();
         var audioService = provider.GetRequiredService<IAudioService>();
-        provider.GetRequiredService<InactivityTrackingService>().BeginTracking();
         discord.UseInteractivity(new InteractivityConfiguration()
         {
             Timeout = TimeSpan.FromSeconds(30),
         });
+
+
         var commandNext = discord.UseCommandsNext(new CommandsNextConfiguration
         {
             StringPrefixes = new string[] { "!" },
-            Services = provider,
+            Services = provider
         });
-
         commandNext.RegisterCommands<MusicCommands>();
         commandNext.RegisterCommands<AdminCommands>();
-        
+
         discord.MessageCreated += async (sender, args) =>
         {
-            if(!args.Message.Author.IsBot)
+            if (!args.Message.Author.IsBot)
             {
                 if (args.Message.Content.ToLower().Equals("hehe"))
                 {
@@ -92,34 +98,34 @@ public class Programs
                 {
                     await args.Channel.SendMessageAsync("https://tenor.com/view/lizard-laughing-laughinglizard-hehehe-gif-5215392");
                 }
-                else if (args.Message.Content.ToLower().Equals("hololive"))
-                {
-                    var gifSearchResult = tenor.Search("hololive", 250, "0").GifResults;
-                    var index = rand.Next(0, gifSearchResult.Length);
-                    var gif = gifSearchResult[index];
-                    await args.Channel.SendMessageAsync(gif.ItemUrl.OriginalString);
+                /*           else if (args.Message.Content.ToLower().Equals("hololive"))
+                           {
+                               var gifSearchResult = tenor.Search("hololive", 250, "0").GifResults;
+                               var index = rand.Next(0, gifSearchResult.Length);
+                               var gif = gifSearchResult[index];
+                               await args.Channel.SendMessageAsync(gif.ItemUrl.OriginalString);
 
-                }
-                else if (args.Message.Content.ToLower().Equals("rules"))
-                {
-                    var gifSearchResult = tenor.Search("dragon ball rules", 250, "0").GifResults;
-                    var index = rand.Next(0, gifSearchResult.Length);
-                    var gif = gifSearchResult[index];
-                    await args.Channel.SendMessageAsync(gif.ItemUrl.OriginalString);
+                           }
+                           else if (args.Message.Content.ToLower().Equals("rules"))
+                           {
+                               var gifSearchResult = tenor.Search("dragon ball rules", 250, "0").GifResults;
+                               var index = rand.Next(0, gifSearchResult.Length);
+                               var gif = gifSearchResult[index];
+                               await args.Channel.SendMessageAsync(gif.ItemUrl.OriginalString);
 
-                }
-                else if (args.Message.Content.ToLower().StartsWith("rule "))
-                {
-                    var index = args.Message.Content.Split(" ")[1];
-                    var gifSearch = 0;
-                    if (Int32.TryParse(index, out gifSearch))
-                    {
-                        var gifSearchResult = tenor.Search("rule " + gifSearch, 250, "0").GifResults;
-                        var gif = gifSearchResult[0];
-                        await args.Channel.SendMessageAsync(gif.ItemUrl.OriginalString);
-                    }
+                           }
+                           else if (args.Message.Content.ToLower().StartsWith("rule "))
+                           {
+                               var index = args.Message.Content.Split(" ")[1];
+                               var gifSearch = 0;
+                               if (Int32.TryParse(index, out gifSearch))
+                               {
+                                   var gifSearchResult = tenor.Search("rule " + gifSearch, 250, "0").GifResults;
+                                   var gif = gifSearchResult[0];
+                                   await args.Channel.SendMessageAsync(gif.ItemUrl.OriginalString);
+                               }
 
-                }
+                           }*/
                 else if (args.Message.Content.ToLower().Equals("twitch"))
                 {
                     await args.Channel.SendMessageAsync("https://www.twitch.tv/isliceurrice");
@@ -142,7 +148,7 @@ public class Programs
                     await args.Channel.SendMessageAsync("https://media.discordapp.net/attachments/750413774300774422/976927871778033694/oval_darren.gif");
                 }
             }
-            
+
         };
         discord.ComponentInteractionCreated += async (sender, args) =>
         {
@@ -190,6 +196,21 @@ public class Programs
                 }
 
             }
+            if (args.Id.Contains("create"))
+            {
+                var userId = args.Id.Split("-")[1];
+
+                if (args.User.Id.ToString() == userId)
+                {
+                    var str = "";
+                    var modal = new DiscordInteractionResponseBuilder().WithTitle("Create a Playlist")
+                    .WithCustomId("createPlaylist")
+                    .AddComponents(new TextInputComponent(label: "Name your playlist", customId: "text", value: str));
+                    await args.Interaction.CreateResponseAsync(InteractionResponseType.Modal, modal);
+
+                }
+
+            }
             if (args.Id == "dropdown" && args.Values[0].StartsWith("option-"))
             {
                 var index = args.Values[0].Split("-")[1];
@@ -205,7 +226,7 @@ public class Programs
                         var des = "";
                         var currentPlaylist = sameUser.Playlist[indexInt];
                         sameUser.currentPlaylist = indexInt;
-                        
+
 
 
                         if (playlist.Count() == 0)
@@ -222,11 +243,12 @@ public class Programs
                         var add = "addsong-" + args.Interaction.User.Id;
                         var delete = "deletesong-" + args.Interaction.User.Id;
                         var change = "change-" + args.Interaction.User.Id;
+                        var create = "create-" + args.Interaction.User.Id;
                         var listOfPlaylists = sameUser.Playlist;
                         var options = new List<DiscordSelectComponentOption>();
                         for (int i = 0; i < listOfPlaylists.Count(); i++)
                         {
-                            if(sameUser.currentPlaylist == i)
+                            if (sameUser.currentPlaylist == i)
                             {
                                 options.Add(new DiscordSelectComponentOption(listOfPlaylists[i].title, "option-" + (i) + "-" + args.User.Id, isDefault: true));
                             }
@@ -244,7 +266,8 @@ public class Programs
                         {
                                 new DiscordButtonComponent(ButtonStyle.Success, add, "Add Song"),
                                 new DiscordButtonComponent(ButtonStyle.Danger, delete, "Remove Song"),
-                                new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title")
+                                new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title"),
+                                new DiscordButtonComponent(ButtonStyle.Secondary, create, "Create Playlist")
 
                         }));
                         await db.UpdateUser(sameUser);
@@ -259,6 +282,65 @@ public class Programs
         discord.ModalSubmitted += async (sender, args) =>
         {
 
+            if (args.Interaction.Data.CustomId == "createPlaylist")
+            {
+                async Task Playlist()
+                {
+                    List<UserModel> userlist = await db.FindDiscordUser(args.Interaction.User.Id);
+                    var sameUser = userlist[0];
+                    var playlist = sameUser.Playlist[sameUser.currentPlaylist].playlists;
+                    var des = "";
+                    var currentPlaylist = sameUser.Playlist[sameUser.currentPlaylist];
+                    var values = args.Values["text"];
+                    sameUser.Playlist.Add(new PlaylistModel { title = values, playlists = new List<SongModel>() });
+
+                    if (playlist.Count() == 0)
+                    {
+                        des += "**You currently have no songs in your playlist**";
+                    }
+                    else
+                    {
+                        for (int i = 0; i < playlist.Count(); i++)
+                        {
+                            des = des + (i + 1) + ") " + playlist[i].title + "\n\n";
+                        }
+                    }
+                    var add = "addsong-" + args.Interaction.User.Id;
+                    var delete = "deletesong-" + args.Interaction.User.Id;
+                    var change = "change-" + args.Interaction.User.Id;
+                    var create = "create-" + args.Interaction.User.Id;
+                    var listOfPlaylists = sameUser.Playlist;
+                    var options = new List<DiscordSelectComponentOption>();
+                    for (int i = 0; i < listOfPlaylists.Count(); i++)
+                    {
+                        if (sameUser.currentPlaylist == i)
+                        {
+                            options.Add(new DiscordSelectComponentOption(listOfPlaylists[i].title, "option-" + (i) + "-" + args.Interaction.User.Id, isDefault: true));
+                        }
+                        else
+                        {
+                            options.Add(new DiscordSelectComponentOption(listOfPlaylists[i].title, "option-" + (i) + "-" + args.Interaction.User.Id));
+                        }
+                    }
+                    await args.Interaction.EditOriginalResponseAsync(new DiscordWebhookBuilder().AddEmbed(new DiscordEmbedBuilder()
+                    {
+                        Title = currentPlaylist.title,
+                        Description = des,
+                    }).AddComponents(new DiscordSelectComponent("dropdown", currentPlaylist.title, options))
+                    .AddComponents(new DiscordComponent[]
+                    {
+                                    new DiscordButtonComponent(ButtonStyle.Success, add, "Add Song"),
+                                    new DiscordButtonComponent(ButtonStyle.Danger, delete, "Remove Song"),
+                                    new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title"),
+                                    new DiscordButtonComponent(ButtonStyle.Secondary, create, "Create Playlist")
+
+                    }));
+                    await db.UpdateUser(sameUser);
+
+                }
+                Playlist();
+                await args.Interaction.CreateResponseAsync(InteractionResponseType.DeferredMessageUpdate);
+            }
 
             if (args.Interaction.Data.CustomId == "changetitle")
             {
@@ -286,6 +368,7 @@ public class Programs
                     var add = "addsong-" + args.Interaction.User.Id;
                     var delete = "deletesong-" + args.Interaction.User.Id;
                     var change = "change-" + args.Interaction.User.Id;
+                    var create = "create-" + args.Interaction.User.Id;
                     var listOfPlaylists = sameUser.Playlist;
                     var options = new List<DiscordSelectComponentOption>();
                     for (int i = 0; i < listOfPlaylists.Count(); i++)
@@ -308,7 +391,8 @@ public class Programs
                     {
                                     new DiscordButtonComponent(ButtonStyle.Success, add, "Add Song"),
                                     new DiscordButtonComponent(ButtonStyle.Danger, delete, "Remove Song"),
-                                    new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title")
+                                    new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title"),
+                                    new DiscordButtonComponent(ButtonStyle.Secondary, create, "Create Playlist")
 
                     }));
                     await db.UpdateUser(sameUser);
@@ -317,26 +401,26 @@ public class Programs
                 Playlist();
                 await args.Interaction.CreateResponseAsync(InteractionResponseType.DeferredMessageUpdate);
             }
-            
+
 
             if (args.Interaction.Data.CustomId == "addmodal")
             {
                 async Task Playlist()
                 {
+                    await audioService.StartAsync();
                     List<UserModel> userlist = await db.FindDiscordUser(args.Interaction.User.Id);
                     var modelInteraction = args.Interaction;
                     var values = args.Values["text"];
                     var sameUser = userlist[0];
                     var currentPlaylist = sameUser.Playlist[sameUser.currentPlaylist];
-                    var loadResult = audioService.LoadTracksAsync(values, SearchMode.YouTube);
-                    if (loadResult.Result.LoadType == TrackLoadType.LoadFailed
-                        || loadResult.Result.LoadType == TrackLoadType.NoMatches)
+                    var loadResult = await audioService.Tracks.LoadTracksAsync(values, TrackSearchMode.YouTube).ConfigureAwait(false); ;
+                    if (loadResult.IsFailed)
                     {
                         await discord.SendMessageAsync(args.Interaction.Channel, $"Track search failed for {values}.");
                         return;
                     }
-                    var track = loadResult.Result.Tracks!.First();
-                    SongModel song = new SongModel() { title = track.Title, link = track.Source };
+                    var track = loadResult.Track;
+                    SongModel song = new SongModel() { title = track.Title, link = track.Uri.OriginalString };
                     currentPlaylist.playlists.Add(song);
                     await db.UpdateUser(sameUser);
                     await discord.SendMessageAsync(args.Interaction.Channel, $"**{track.Title}** has been added to your playlist!");
@@ -357,6 +441,7 @@ public class Programs
                     var add = "addsong-" + args.Interaction.User.Id;
                     var delete = "deletesong-" + args.Interaction.User.Id;
                     var change = "change-" + args.Interaction.User.Id;
+                    var create = "create-" + args.Interaction.User.Id;
                     var listOfPlaylists = sameUser.Playlist;
                     var options = new List<DiscordSelectComponentOption>();
                     for (int i = 0; i < listOfPlaylists.Count(); i++)
@@ -379,7 +464,8 @@ public class Programs
                     {
                         new DiscordButtonComponent(ButtonStyle.Success, add, "Add Song"),
                         new DiscordButtonComponent(ButtonStyle.Danger, delete, "Remove Song"),
-                        new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title")
+                        new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title"),
+                        new DiscordButtonComponent(ButtonStyle.Secondary, create, "Create Playlist")
                     }));
                 }
                 Playlist();
@@ -391,16 +477,16 @@ public class Programs
                 {
                     var values = args.Values["text"];
                     var isInt = true;
-                    for(int i = 0; i < values.Length; i++)
+                    for (int i = 0; i < values.Length; i++)
                     {
                         if (((char)values[i] < 48 || (char)values[i] > 57)) isInt = false;
                         else if ((char)values[i] == 48 && i == 0) isInt = false;
                     }
-                    if(isInt) 
+                    if (isInt)
                     {
                         List<UserModel> userlist = await db.FindDiscordUser(args.Interaction.User.Id);
                         var modelInteraction = args.Interaction;
-                    
+
                         var sameUser = userlist[0];
                         var num = Int32.Parse(values);
                         var currentPlaylist = sameUser.Playlist[sameUser.currentPlaylist];
@@ -411,7 +497,7 @@ public class Programs
                         {
                             des += "**You currently have no songs in your playlist**";
                         }
-                        else if(playlist.Count() < num)
+                        else if (playlist.Count() < num)
                         {
                             des += "**Input number too large**";
                         }
@@ -435,6 +521,7 @@ public class Programs
                             var add = "addsong-" + args.Interaction.User.Id;
                             var delete = "deletesong-" + args.Interaction.User.Id;
                             var change = "change-" + args.Interaction.User.Id;
+                            var create = "create-" + args.Interaction.User.Id;
                             var listOfPlaylists = sameUser.Playlist;
                             var options = new List<DiscordSelectComponentOption>();
                             for (int i = 0; i < listOfPlaylists.Count(); i++)
@@ -457,25 +544,36 @@ public class Programs
                             {
                                 new DiscordButtonComponent(ButtonStyle.Success, add, "Add Song"),
                                 new DiscordButtonComponent(ButtonStyle.Danger, delete, "Remove Song"),
-                                new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title")
+                                new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title"),
+                                new DiscordButtonComponent(ButtonStyle.Secondary, create, "Create Playlist")
                             }));
                         }
-                        
+
                     }
                     else
                     {
                         await discord.SendMessageAsync(args.Interaction.Channel, "Input a valid digit");
                     }
-                    
+
                 }
                 Playlist();
                 await args.Interaction.CreateResponseAsync(InteractionResponseType.DeferredMessageUpdate);
             }
         };
-        
+
         await discord.ConnectAsync();
-        await audioService.InitializeAsync();
+        await audioService.StartAsync();
 
         await Task.Delay(-1);
+
+
     }
+
+
+    // DSharpPlus
+
+
+
+
+
 }

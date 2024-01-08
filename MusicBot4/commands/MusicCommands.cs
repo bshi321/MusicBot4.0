@@ -4,31 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using global::DSharpPlus;
-using global::DSharpPlus.Net;
-using global::DSharpPlus.Net.WebSocket;
 using global::DSharpPlus.CommandsNext;
 using global::DSharpPlus.CommandsNext.Attributes;
 using global::DSharpPlus.Entities;
 using Lavalink4NET;
-using Lavalink4NET.Decoding;
-using Lavalink4NET.Events;
-using Lavalink4NET.Filters;
-using Lavalink4NET.Payloads;
-using Lavalink4NET.Lyrics;
-using Lavalink4NET.Tracking;
-using Lavalink4NET.Statistics;
-using Lavalink4NET.Cluster;
-using Lavalink4NET.Player;
-using Lavalink4NET.Rest;
-using Lavalink4NET.DSharpPlus;
-using Lavalink4NET.Logging;
 using DiscordDb.Models;
 using DiscordDb.DataAccess;
-using DSharpPlus.Interactivity;
-using DSharpPlus.Interactivity.EventHandling;
 using DSharpPlus.Interactivity.Extensions;
-using DSharpPlus.Interactivity.Enums;
-
+using Lavalink4NET.Players.Queued;
+using Lavalink4NET.Players;
+using Lavalink4NET.Clients;
+using Microsoft.Extensions.Options;
+using Lavalink4NET.Rest.Entities.Tracks;
+using Lavalink4NET.InactivityTracking.Players;
+using Lavalink4NET.Tracks;
+using Lavalink4NET.Rest.Entities;
+using Lavalink4NET.Rest;
+using Amazon.Auth.AccessControlPolicy;
+using Lavalink4NET.Players;
+using Lavalink4NET.Players.Queued;
 //using Microsoft.Extensions.Logging;
 //using Microsoft.Extensions.DependencyInjection;
 //using static Microsoft.Extensions.Logging.LogLevel;
@@ -37,21 +31,85 @@ public class MusicCommands : BaseCommandModule
 {
     public IAudioService AudioService { private get; set; }
     public List<string> queueAuthors = new List<string>();
-    public sealed class TrackContext {
-        public ulong RequesterId { get; set; }
 
-        public string OriginalQuery { get; set; }
+
+    public sealed record class TrackData(TrackReference Reference) : ITrackQueueItem
+    {
+        public string Author;
+
+        public int DashboardId;
+
+        public string Title;
+
+        public StreamProvider Provider;
+
+        public ulong Requester;
+        
 
     };
+    public sealed class CustomPlayer : QueuedLavalinkPlayer
+    {
+        public new TrackData? CurrentItem => (TrackData?)base.CurrentItem;
+        public CustomPlayer(IPlayerProperties<CustomPlayer, CustomPlayerOptions> properties)
+            : base(properties)
+        {
+           
+        }
+    }
+    public sealed record class CustomPlayerOptions : QueuedLavalinkPlayerOptions
+    {
+    }
+
+    // Create a player factory
+    static ValueTask<CustomPlayer> CreatePlayerAsync(IPlayerProperties<CustomPlayer, CustomPlayerOptions> properties, CancellationToken cancellationToken = default)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+        ArgumentNullException.ThrowIfNull(properties);
+
+        return ValueTask.FromResult(new CustomPlayer(properties));
+    }
+
     public static DataAccess db = new DataAccess();
-    static Dictionary<DiscordGuild, Queue<LavalinkTrack>> serverQueue = new Dictionary<DiscordGuild, Queue<LavalinkTrack>>();
+
+    private async ValueTask<CustomPlayer?> GetPlayerAsync(CommandContext ctx, bool connectToVoiceChannel = true)
+    {
+        var channelBehavior = connectToVoiceChannel
+            ? PlayerChannelBehavior.Join
+            : PlayerChannelBehavior.None;
+
+        var retrieveOptions = new PlayerRetrieveOptions(ChannelBehavior: channelBehavior, MemberVoiceStateBehavior.RequireSame);
+        var options = new CustomPlayerOptions
+        {
+            DisconnectOnStop = false, ClearQueueOnStop = false, SelfDeaf = true
+        };
+        var result = await AudioService.Players
+            .RetrieveAsync<CustomPlayer, CustomPlayerOptions>(ctx.Guild.Id, ctx.Member.VoiceState.Channel.Id, CreatePlayerAsync, new OptionsWrapper<CustomPlayerOptions>(options), retrieveOptions)
+            .ConfigureAwait(false);
+
+        if (!result.IsSuccess)
+        {
+            var errorMessage = result.Status switch
+            {
+                PlayerRetrieveStatus.UserNotInVoiceChannel => "You are not connected to a voice channel.",
+                PlayerRetrieveStatus.BotNotConnected => "The bot is currently not connected.",
+                _ => "Unknown error.",
+            };
+
+            await ctx.RespondAsync(errorMessage).ConfigureAwait(false);
+            return null;
+        }
+
+        return result.Player;
+    }
+
+
 
     [Command]
 
     public async Task Play(CommandContext ctx)
     {
+       // await AudioService.StartAsync();
         var user = ctx.User;
-
         List<UserModel> userlist = await db.FindDiscordUser(user.Id);
 
         if (userlist.Count() == 0)
@@ -70,14 +128,8 @@ public class MusicCommands : BaseCommandModule
                 await ctx.RespondAsync("You are not in a voice channel.");
                 return;
             }
-            var guildId = ctx.Guild.Id;
-            var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
 
-            var player = AudioService.GetPlayer<QueuedLavalinkPlayer>(guildId);
-            if (player is null)
-            {
-                player = await AudioService.JoinAsync<QueuedLavalinkPlayer>(guildId, voiceChannelId);
-            }
+            var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
 
             var playlist = sameUser.Playlist[sameUser.currentPlaylist].playlists;
             if (playlist == null || playlist.Count() == 0)
@@ -87,35 +139,37 @@ public class MusicCommands : BaseCommandModule
             }
             if(sameUser.isPremium == true)
             {
-                player.Queue.Clear();
+                await player.Queue.ClearAsync();
                 await player.SkipAsync();
                 LavalinkTrack track;
                 for (int i = 0; i < playlist.Count(); i++)
                 {
                     var title = playlist[i].title;
                     var link = playlist[i].link;
-                    var loadResult = AudioService.LoadTracksAsync(link, SearchMode.YouTube);
-                    if (loadResult.Result.LoadType == TrackLoadType.LoadFailed
-                        || loadResult.Result.LoadType == TrackLoadType.NoMatches)
+                    var loadResult = await AudioService.Tracks.LoadTracksAsync(link, TrackSearchMode.YouTube).ConfigureAwait(false);
+                    if (loadResult.IsFailed)
                     {
                         await ctx.RespondAsync($"Track search failed for {title}.");
                         return;
                     }
-                    track = loadResult.Result.Tracks!.First();
+                    track = loadResult.Track;
 
-                    track.Context = new TrackContext
+                    TrackData data = new TrackData(new TrackReference(track))
                     {
-
-                        RequesterId = ctx.Member.Id,
+                        Requester = ctx.Member.Id,
+                        Provider = track.Provider.Value,
+                        Author = track.Author,
+                        Title = track.Title
                     };
+
                     if (player.CurrentTrack == null)
                     {
                         await ctx.RespondAsync($"Now playing **{track.Title}**!");
-                        await player.PlayTopAsync(track);
+                        await player.PlayAsync(data).ConfigureAwait(false);
                     }
                     else
                     {
-                        player.Queue.Add(track);
+                        await player.PlayAsync(data).ConfigureAwait(false);
                     }
                 }
             }
@@ -126,29 +180,30 @@ public class MusicCommands : BaseCommandModule
                     LavalinkTrack track;
                     var title = playlist[i].title;
                     var link = playlist[i].link;
-                    var loadResult = AudioService.LoadTracksAsync(link, SearchMode.YouTube);
-                    if (loadResult.Result.LoadType == TrackLoadType.LoadFailed
-                        || loadResult.Result.LoadType == TrackLoadType.NoMatches)
+                    var loadResult = await AudioService.Tracks.LoadTracksAsync(link, TrackSearchMode.YouTube).ConfigureAwait(false);
+                    if (loadResult.IsFailed)
                     {
                         await ctx.RespondAsync($"Track search failed for {title}.");
                         return;
                     }
-                    track = loadResult.Result.Tracks!.First();
+                    track = loadResult.Track;
 
-                    track.Context = new TrackContext
+                    TrackData data = new TrackData(new TrackReference(track))
                     {
-
-                        RequesterId = ctx.Member.Id,
+                        Requester = ctx.Member.Id,
+                        Provider = track.Provider.Value,
+                        Author = track.Author,
+                        Title = track.Title
                     };
 
                     if (player.CurrentTrack == null)
                     {
                         await ctx.RespondAsync($"Now playing **{track.Title}**!");
-                        await player.PlayTopAsync(track);
+                        await player.PlayAsync(data).ConfigureAwait(false);
                     }
                     else
                     {
-                        player.Queue.Add(track);
+                        await player.PlayAsync(data).ConfigureAwait(false);
                     }
 
                 }
@@ -167,46 +222,51 @@ public class MusicCommands : BaseCommandModule
             await ctx.RespondAsync("You are not in a voice channel.");
             return;
         }
+      //  await AudioService.StartAsync();
         var guildId = ctx.Guild.Id;
         var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
 
 
-        var player = AudioService.GetPlayer<QueuedLavalinkPlayer>(guildId);
-        if(player is null)
-        {
-            player = await AudioService.JoinAsync<QueuedLavalinkPlayer>(guildId, voiceChannelId);
-        }
-        
-        
-        var loadResult = AudioService.LoadTracksAsync(search, SearchMode.YouTube);
-        if(loadResult.Result.LoadType == TrackLoadType.LoadFailed
-            || loadResult.Result.LoadType == TrackLoadType.NoMatches)
+        var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
+
+
+        var loadResult = await AudioService.Tracks.LoadTracksAsync(search, TrackSearchMode.YouTube).ConfigureAwait(false);
+        if (loadResult.IsFailed)
         {
             await ctx.RespondAsync($"Track search failed for {search}.");
             return;
         }
-        var track = loadResult.Result.Tracks.First();
+        var track = loadResult.Track;
         if (player.CurrentTrack == null)
         {
-            await player.PlayTopAsync(track);
+            TrackData data = new TrackData(new TrackReference(track))
+            {
+                Requester = ctx.Member.Id,
+                Provider = track.Provider.Value,
+                Author = track.Author,
+                Title = track.Title,
+            };
+
+            await player.PlayAsync(data).ConfigureAwait(false);
             //  await player.SetVolumeAsync(0.5f, false);
             await ctx.RespondAsync($"Now playing **{track.Title}**!");
-            track.Context = new TrackContext
-            {
-                OriginalQuery = search,
-                RequesterId = ctx.Member.Id,
-            };
+
         }
         else
         {
-            await player.PlayAsync(track);
+            
+            TrackData data = new TrackData(new TrackReference(track))
+            {
+                Requester = ctx.Member.Id,
+                Provider = track.Provider.Value,
+                Author = track.Author,
+                Title = track.Title,
+            };
+            
+            await player.PlayAsync(data).ConfigureAwait(false);
             //  await player.SetVolumeAsync(0.5f, false);
             await ctx.RespondAsync($"**{track.Title}** has been queued!");
-            track.Context = new TrackContext
-            {
-                OriginalQuery = search,
-                RequesterId = ctx.Member.Id,
-            };
+            
         }
         
 
@@ -224,16 +284,11 @@ public class MusicCommands : BaseCommandModule
             await ctx.RespondAsync("You don't have permission to skip.");
             return;
         }
+        //await AudioService.StartAsync();
         var guildId = ctx.Guild.Id;
         var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
-        var player = AudioService.GetPlayer<QueuedLavalinkPlayer>(guildId);
-        if (player is null)
-         {
-             await ctx.RespondAsync("I am not connected to a voice channel in this server.");
-
-             return;
-         }
-         if (player.CurrentTrack == null)
+        var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
+        if (player.CurrentTrack == null)
          {
 
              await ctx.RespondAsync("Nothing is playing currently.");
@@ -241,8 +296,8 @@ public class MusicCommands : BaseCommandModule
          }
          else
          {
-            var context = (TrackContext)player.CurrentTrack.Context;
-            var id = context.RequesterId;
+            var context = (TrackData)player.CurrentItem;
+            var id = context.Requester;
             var user = ctx.User;
 
             List<UserModel> userlist = await db.FindDiscordUser(id);
@@ -281,17 +336,18 @@ public class MusicCommands : BaseCommandModule
             await ctx.RespondAsync("You are not in a voice channel.");
             return;
         }
+      //  await AudioService.StartAsync();
         var guildId = ctx.Guild.Id;
         var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
-        var player = AudioService.GetPlayer<QueuedLavalinkPlayer>(guildId);
-        if(player is null)
+        var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
+    /*    if (player is null)
         {
             var msg2 = await new DiscordMessageBuilder().AddEmbed(new DiscordEmbedBuilder()
             {
                 Title = "I am not connected to a voice channel"
             }).SendAsync(ctx.Channel);
             return;
-        }
+        }*/
 
 
         if (player.Queue.IsEmpty)
@@ -299,8 +355,8 @@ public class MusicCommands : BaseCommandModule
             var des = "";
             if (player.CurrentTrack != null)
             {
-                var currrentTrackContext = (TrackContext)player.CurrentTrack.Context!;
-                var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.RequesterId);
+                var currrentTrackContext = (TrackData)player.CurrentItem!;
+                var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.Requester);
                 des = "**Currently playing: " + player.CurrentTrack.Title + ", by " + currentTrack.Username + "**" + "\n\n";
             }
             des += "There is nothing queued currently";
@@ -311,19 +367,19 @@ public class MusicCommands : BaseCommandModule
             }).SendAsync(ctx.Channel);
             return;
         }
-        var count = player.Queue.Tracks.Count;
+        var count = player.Queue.Count;
         var str = "";
         if (!(player.CurrentTrack == null))
         {
-            var currrentTrackContext = (TrackContext)player.CurrentTrack.Context!;
-            var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.RequesterId);
+            var currrentTrackContext = (TrackData)player.CurrentItem!;
+            var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.Requester);
             str = "**Currently playing: " + player.CurrentTrack.Title + ", by " + currentTrack.Username + "**" + "\n\n";
         }
         for (int i = 0; i < count; i++)
         {
-            var context = (TrackContext)player.Queue[i].Context!;
-            var user = await ctx.Client.GetUserAsync(context.RequesterId);
-            str = str + (i + 1) + ") " + player.Queue[i].Title + ", **by " + user.Username + "**" + "\n\n";
+            var context = (TrackData)player.Queue[i]!;
+            var user = await ctx.Client.GetUserAsync(context.Requester);
+            str = str + (i + 1) + ") " + context.Title + ", **by " + user.Username + "**" + "\n\n";
         }
         var embed = new DiscordEmbedBuilder()
         {
@@ -342,6 +398,7 @@ public class MusicCommands : BaseCommandModule
             await ctx.RespondAsync("You are not in a voice channel.");
             return;
         }
+       // await AudioService.StartAsync();
         /*if (ctx.Member.Id == 388501645769834497)
         {
             await ctx.RespondAsync("You are Maggie. You can't remove songs in the queue.");
@@ -349,15 +406,15 @@ public class MusicCommands : BaseCommandModule
         }*/
         var guildId = ctx.Guild.Id;
         var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
-        var player = AudioService.GetPlayer<QueuedLavalinkPlayer>(guildId);
-        if (player is null)
+        var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
+       /* if (player is null)
         {
             var msg2 = await new DiscordMessageBuilder().AddEmbed(new DiscordEmbedBuilder()
             {
                 Title = "I am not connected to a voice channel"
             }).SendAsync(ctx.Channel);
             return;
-        }
+        }*/
 
 
         if (player.Queue.IsEmpty)
@@ -365,8 +422,8 @@ public class MusicCommands : BaseCommandModule
             var des = "";
             if (player.CurrentTrack != null)
             {
-                var currrentTrackContext = (TrackContext)player.CurrentTrack.Context!;
-                var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.RequesterId);
+                var currrentTrackContext = (TrackData)player.CurrentItem!;
+                var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.Requester);
                 des = "**Currently playing: " + player.CurrentTrack.Title + ", by " + currentTrack.Username + "**" + "\n\n";
             }
             des += "There is nothing queued currently";
@@ -378,20 +435,20 @@ public class MusicCommands : BaseCommandModule
             return;
         }
 
-        var count = player.Queue.Tracks.Count;
+        var count = player.Queue.Count;
         var str = "";
         if(!(player.CurrentTrack == null))
         {
-            var currrentTrackContext = (TrackContext)player.CurrentTrack.Context!;
-            var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.RequesterId);
+            var currrentTrackContext = (TrackData)player.CurrentItem!;
+            var currentTrack = await ctx.Client.GetUserAsync(currrentTrackContext.Requester);
             str = "**Currently playing: " + player.CurrentTrack.Title + ", by " + currentTrack.Username + "**" + "\n\n";
         }
         
         for (int i = 0; i < count; i++)
         {
-            var context = (TrackContext)player.Queue[i].Context!;
-            var user = await ctx.Client.GetUserAsync(context.RequesterId);
-            str = str + (i + 1) + ") " + player.Queue[i].Title + ", **by " + user.Username + "**" + "\n\n";
+            var context = (TrackData)player.Queue[i]!;
+            var user = await ctx.Client.GetUserAsync(context.Requester);
+            str = str + (i + 1) + ") " + context.Title + ", **by " + user.Username + "**" + "\n\n";
         }
         var embed = new DiscordEmbedBuilder()
         {
@@ -410,6 +467,7 @@ public class MusicCommands : BaseCommandModule
             await ctx.RespondAsync("You are not in a voice channel.");
             return;
         }
+     //   await AudioService.StartAsync();
         /*if (ctx.Member.Id == 388501645769834497)
         {
             await ctx.RespondAsync("You are Maggie. You can't remove songs in the queue.");
@@ -417,7 +475,7 @@ public class MusicCommands : BaseCommandModule
         }*/
         var guildId = ctx.Guild.Id;
         var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
-        var player = AudioService.GetPlayer<QueuedLavalinkPlayer>(guildId);
+        var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
         if (player is null)
         {
             var msg2 = await new DiscordMessageBuilder().AddEmbed(new DiscordEmbedBuilder()
@@ -436,8 +494,8 @@ public class MusicCommands : BaseCommandModule
             }).SendAsync(ctx.Channel);
             return;
         }
-        var context = (TrackContext)player.CurrentTrack.Context;
-        var id = context.RequesterId;
+        var context = (TrackData)player.CurrentItem;
+        var id = context.Requester;
         var user = ctx.User;
 
         List<UserModel> userlist = await db.FindDiscordUser(id);
@@ -451,10 +509,10 @@ public class MusicCommands : BaseCommandModule
                 return;
             }
         }
-
+        
         var index = num - 1;
-        var track = player.Queue[index];
-        player.Queue.RemoveAt(index);
+        var track = (TrackData)player.Queue[index];
+        await player.Queue.RemoveAtAsync(index);
         await ctx.RespondAsync($"Removed **{track.Title}** from the queue!");
         return;
     }
@@ -463,9 +521,10 @@ public class MusicCommands : BaseCommandModule
 
     public async Task disconnect(CommandContext ctx)
     {
+     //   await AudioService.StartAsync();
         var guildId = ctx.Guild.Id;
         var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
-        var player = AudioService.GetPlayer<QueuedLavalinkPlayer>(guildId);
+        var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
         await player.DisconnectAsync();
         if (ctx.Member.Id == 237384813189922816 && player is not null)
         {
@@ -478,10 +537,10 @@ public class MusicCommands : BaseCommandModule
 
     public async Task Playlist(CommandContext ctx)
     {
+      //  await AudioService.StartAsync();
         var user = ctx.User;
-        ctx.RespondAsync("apples");
+
         List<UserModel> userlist = await db.FindDiscordUser(user.Id);
-        ctx.RespondAsync("apples2");
         if (userlist.Count() == 0)
         {
             List<PlaylistModel> list = new List<PlaylistModel>();
@@ -491,86 +550,53 @@ public class MusicCommands : BaseCommandModule
         }
         else
         {
-            var interactivity = ctx.Client.GetInteractivity();
+    
+            var sameUser = userlist[0];
 
-            await ctx.RespondAsync("Respond with '**;add**' to create a new playlist\nOtherwise, respond with '**;view**' to view your playlists");
-            var result = await ctx.Message.GetNextMessageAsync();
-            if(!result.TimedOut)
+            var des = "";
+            var currentPlaylist = sameUser.Playlist[sameUser.currentPlaylist];
+            var playlist = currentPlaylist.playlists;
+            if (playlist.Count() == 0)
             {
-                var sameUser = userlist[0];
-                if (result.Result.Content == ";add")
-                {
-                    sameUser.Playlist.Add(new PlaylistModel { title = "untitled", playlists = new List<SongModel>() });
-                    db.UpdateUser(sameUser);
-                    await ctx.RespondAsync("An untitled playlist has been added");
-                }
-                else if(result.Result.Content == ";view")
-                {
-
-                    var des = "";
-                    var currentPlaylist = sameUser.Playlist[sameUser.currentPlaylist];
-                    var playlist = currentPlaylist.playlists;
-                    if (playlist.Count() == 0)
-                    {
-                        des += "**You currently have no songs in your playlist**";
-                    }
-                    else
-                    {
-                        for (int i = 0; i < playlist.Count(); i++)
-                        {
-                            des = des + (i + 1) + ") " + playlist[i].title + "\n\n";
-                        }
-                    }
-                    var add = "addsong-" + user.Id;
-                    var delete = "deletesong-" + user.Id;
-                    var change = "change-" + user.Id;
-                    var listOfPlaylists = sameUser.Playlist;
-                    var options = new List<DiscordSelectComponentOption>();
-                    for (int i = 0; i < listOfPlaylists.Count(); i++)
-                    {
-                        if (sameUser.currentPlaylist == i)
-                        {
-                            options.Add(new DiscordSelectComponentOption(listOfPlaylists[i].title, "option-" + (i) + "-" + ctx.User.Id, isDefault: true));
-                        }
-                        else
-                        {
-                            options.Add(new DiscordSelectComponentOption(listOfPlaylists[i].title, "option-" + (i) + "-" + ctx.User.Id));
-                        }
-                    }
-                    var msg2 = await new DiscordMessageBuilder().AddEmbed(new DiscordEmbedBuilder()
-                    {
-                        Title = currentPlaylist.title,
-                        Description = des,
-                    }).AddComponents(new DiscordSelectComponent("dropdown", currentPlaylist.title, options))
-                        .AddComponents(new DiscordComponent[]
-                            {
-                                new DiscordButtonComponent(ButtonStyle.Success, add, "Add Song"),
-                                new DiscordButtonComponent(ButtonStyle.Danger, delete, "Remove Song"),
-                                new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title")
-                            }).SendAsync(ctx.Channel);
-                    async Task Check()
-                    {
-
-                    }
-                    
-                }
+                des += "**You currently have no songs in your playlist**";
             }
             else
             {
-                await ctx.RespondAsync("You did not respond in time");
+                for (int i = 0; i < playlist.Count(); i++)
+                {
+                    des = des + (i + 1) + ") " + playlist[i].title + "\n\n";
+                }
             }
+            var add = "addsong-" + user.Id;
+            var delete = "deletesong-" + user.Id;
+            var change = "change-" + user.Id;
+            var create = "create-" + user.Id;
+            var listOfPlaylists = sameUser.Playlist;
+            var options = new List<DiscordSelectComponentOption>();
+            for (int i = 0; i < listOfPlaylists.Count(); i++)
+            {
+                if (sameUser.currentPlaylist == i)
+                {
+                    options.Add(new DiscordSelectComponentOption(listOfPlaylists[i].title, "option-" + (i) + "-" + ctx.User.Id, isDefault: true));
+                }
+                else
+                {
+                    options.Add(new DiscordSelectComponentOption(listOfPlaylists[i].title, "option-" + (i) + "-" + ctx.User.Id));
+                }
+            }
+            var msg2 = await new DiscordMessageBuilder().AddEmbed(new DiscordEmbedBuilder()
+            {
+                Title = currentPlaylist.title,
+                Description = des,
+            }).AddComponents(new DiscordSelectComponent("dropdown", currentPlaylist.title, options))
+                .AddComponents(new DiscordComponent[]
+                    {
+                        new DiscordButtonComponent(ButtonStyle.Success, add, "Add Song"),
+                        new DiscordButtonComponent(ButtonStyle.Danger, delete, "Remove Song"),
+                        new DiscordButtonComponent(ButtonStyle.Primary, change, "Change Title"),
+                        new DiscordButtonComponent(ButtonStyle.Secondary, create, "Create Playlist")
+                    }).SendAsync(ctx.Channel);
 
-
-
-
-
-
-
-
-
-
-            
-            
         }
         return;
     }

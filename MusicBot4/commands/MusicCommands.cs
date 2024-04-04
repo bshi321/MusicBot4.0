@@ -230,13 +230,13 @@ public class MusicCommands : BaseCommandModule
         var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);
 
 
-        var loadResult = await AudioService.Tracks.LoadTracksAsync(search, TrackSearchMode.YouTube).ConfigureAwait(false);
-        if (loadResult.IsFailed)
+        var loadResult = await AudioService.Tracks.LoadTrackAsync(search, TrackSearchMode.YouTube).ConfigureAwait(false);
+        if (loadResult is null)
         {
             await ctx.RespondAsync($"Track search failed for {search}.");
             return;
         }
-        var track = loadResult.Track;
+        var track = loadResult;
         if (player.CurrentTrack == null)
         {
             TrackData data = new TrackData(new TrackReference(track))

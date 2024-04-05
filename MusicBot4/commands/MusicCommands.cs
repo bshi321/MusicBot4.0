@@ -285,6 +285,7 @@ public class MusicCommands : BaseCommandModule
             return;
         }
         //await AudioService.StartAsync();
+        Console.WriteLine("WTF");
         var guildId = ctx.Guild.Id;
         var voiceChannelId = ctx.Member.VoiceState.Channel.Id;
         var player = await GetPlayerAsync(ctx, connectToVoiceChannel: true).ConfigureAwait(false);

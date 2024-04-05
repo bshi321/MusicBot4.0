@@ -24,8 +24,14 @@ using DSharpPlus.Exceptions;
 using DSharpPlus.Net;
 using Lavalink4NET.Rest;
 using Lavalink4NET.Protocol;
-
-
+using Lavalink4NET.InactivityTracking.Players;
+using Lavalink4NET.InactivityTracking.Extensions;
+using Lavalink4NET.InactivityTracking.Events;
+using Lavalink4NET.InactivityTracking.Queue;
+using Lavalink4NET.InactivityTracking.Trackers;
+using Lavalink4NET.InactivityTracking;
+using Lavalink4NET.InactivityTracking.Trackers.Idle;
+using Lavalink4NET.InactivityTracking.Trackers.Users;
 
 public class Programs
 {
@@ -53,6 +59,16 @@ public class Programs
             config.ResumptionOptions = new LavalinkSessionResumptionOptions(TimeSpan.FromSeconds(60));
             config.HttpClientName = "LavalinkHttpClient";
         })
+        .AddInactivityTracking()
+        .AddInactivityTracker<IdleInactivityTracker>().Configure<IdleInactivityTrackerOptions>(options =>
+        {
+            options.Timeout = TimeSpan.FromSeconds(30);
+        })
+        .AddInactivityTracker<UsersInactivityTracker>().Configure<UsersInactivityTrackerOptions>(options =>
+        {
+            options.Timeout = TimeSpan.FromSeconds(30);
+        })
+        .ConfigureInactivityTracking(options => { options.DefaultTimeout = TimeSpan.FromSeconds(30); })
         .BuildServiceProvider();
 
     public static Random rand = new Random();
@@ -64,6 +80,7 @@ public class Programs
         var provider = BuildServiceProvider();
         var discord = provider.GetRequiredService<DiscordClient>();
         var audioService = provider.GetRequiredService<IAudioService>();
+        var inactivityTracker = provider.GetRequiredService<IInactivityTrackingService>();
         discord.UseInteractivity(new InteractivityConfiguration()
         {
             Timeout = TimeSpan.FromSeconds(30),
@@ -562,8 +579,9 @@ public class Programs
         };
 
         await discord.ConnectAsync();
+        
         await audioService.StartAsync();
-
+        await inactivityTracker.StartAsync();
         await Task.Delay(-1);
 
 

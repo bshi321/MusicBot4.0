@@ -41,11 +41,13 @@ public class Programs
         RunAsync().GetAwaiter().GetResult();
     }
 
-    private static ServiceProvider BuildServiceProvider() => new ServiceCollection()
+    private static ServiceProvider BuildServiceProvider() { 
+        string discordToken = Environment.GetEnvironmentVariable("DISCORD_API_TOKEN")
+        return new ServiceCollection()
         .AddSingleton<DiscordClient>()
         .AddSingleton(new DiscordConfiguration
         {
-            Token = "DISCORD_API",
+            Token = Environment.GetEnvironmentVariable("DISCORD_API_TOKEN"),
             TokenType = TokenType.Bot,
             Intents = DiscordIntents.AllUnprivileged | DiscordIntents.MessageContents | DiscordIntents.GuildVoiceStates,
             MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug
@@ -70,6 +72,7 @@ public class Programs
         })
         .ConfigureInactivityTracking(options => { options.DefaultTimeout = TimeSpan.FromSeconds(30); })
         .BuildServiceProvider();
+    } 
 
     public static Random rand = new Random();
     public static DataAccess db = new DataAccess();

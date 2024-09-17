@@ -1,4 +1,555 @@
-2023-12-13T01:38:48.586-05:00  INFO 23280 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:49939 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id plzf30om8bamadij
-2023-12-13T01:38:54.651-05:00  INFO 23280 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.6.Final
-2023-12-13T01:38:54.878-05:00  INFO 23280 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2023-12-13T01:38:54.949-05:00  INFO 23280 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2024-09-16T21:29:31.243-04:00  INFO 18496 --- [main] lavalink.server.Launcher                 : Starting Launcher vc1ff05db1045c793764ebdff6e6c8e9bf2d6aaec-SNAPSHOT using Java 17.0.1 with PID 18496 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T21:29:31.368-04:00  INFO 18496 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:29:32.237-04:00  INFO 18496 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.684 seconds (process running for 2.652)
+2024-09-16T21:29:32.301-04:00  INFO 18496 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        c1ff05db1045c793764ebdff6e6c8e9bf2d6aaec-SNAPSHOT
+	Build time:     30.03.2024 12:24:59 UTC
+	Branch          dev
+	Commit:         c1ff05d
+	Commit time:    25.03.2024 13:13:06 UTC
+	JVM:            17.0.1
+	Lavaplayer      afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT
+
+2024-09-16T21:29:32.311-04:00  INFO 18496 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:29:32.976-04:00  WARN 18496 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2024-09-16T21:29:32.995-04:00  INFO 18496 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2024-09-16T21:29:32.995-04:00  INFO 18496 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 680 ms
+2024-09-16T21:29:33.072-04:00  WARN 18496 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2024-09-16T21:29:33.165-04:00  INFO 18496 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2024-09-16T21:29:34.219-04:00  INFO 18496 --- [main] l.server.config.KoeConfiguration         : OS: WINDOWS, Arch: X86_64
+2024-09-16T21:29:34.219-04:00  INFO 18496 --- [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2024-09-16T21:29:34.223-04:00  INFO 18496 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2024-09-16T21:29:34.262-04:00  INFO 18496 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2024-09-16T21:29:34.553-04:00  INFO 18496 --- [main] io.undertow                              : starting server: Undertow - 2.3.6.Final
+2024-09-16T21:29:34.567-04:00  INFO 18496 --- [main] org.xnio                                 : XNIO version 3.8.8.Final
+2024-09-16T21:29:34.576-04:00  INFO 18496 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2024-09-16T21:29:34.652-04:00  INFO 18496 --- [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-09-16T21:29:34.731-04:00  INFO 18496 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
+2024-09-16T21:29:34.737-04:00  INFO 18496 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.492 seconds (process running for 5.152)
+2024-09-16T21:29:34.738-04:00  INFO 18496 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2024-09-16T21:38:48.861-04:00  INFO 28928 --- [main] lavalink.server.Launcher                 : Starting Launcher vc1ff05db1045c793764ebdff6e6c8e9bf2d6aaec-SNAPSHOT using Java 17.0.1 with PID 28928 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T21:38:48.864-04:00  INFO 28928 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:38:49.734-04:00  INFO 28928 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.432 seconds (process running for 1.919)
+2024-09-16T21:38:49.791-04:00  INFO 28928 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        c1ff05db1045c793764ebdff6e6c8e9bf2d6aaec-SNAPSHOT
+	Build time:     30.03.2024 12:24:59 UTC
+	Branch          dev
+	Commit:         c1ff05d
+	Commit time:    25.03.2024 13:13:06 UTC
+	JVM:            17.0.1
+	Lavaplayer      afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT
+
+2024-09-16T21:38:49.801-04:00  INFO 28928 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:38:50.399-04:00  WARN 28928 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2024-09-16T21:38:50.420-04:00  INFO 28928 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2024-09-16T21:38:50.421-04:00  INFO 28928 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 615 ms
+2024-09-16T21:38:50.494-04:00  WARN 28928 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2024-09-16T21:38:50.582-04:00  INFO 28928 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2024-09-16T21:38:51.103-04:00  INFO 28928 --- [main] l.server.config.KoeConfiguration         : OS: WINDOWS, Arch: X86_64
+2024-09-16T21:38:51.104-04:00  INFO 28928 --- [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2024-09-16T21:38:51.107-04:00  INFO 28928 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2024-09-16T21:38:51.351-04:00  INFO 28928 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2024-09-16T21:38:51.596-04:00  INFO 28928 --- [main] io.undertow                              : starting server: Undertow - 2.3.6.Final
+2024-09-16T21:38:51.606-04:00  INFO 28928 --- [main] org.xnio                                 : XNIO version 3.8.8.Final
+2024-09-16T21:38:51.617-04:00  INFO 28928 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2024-09-16T21:38:51.681-04:00  INFO 28928 --- [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-09-16T21:38:51.739-04:00  INFO 28928 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
+2024-09-16T21:38:51.744-04:00  INFO 28928 --- [main] lavalink.server.Launcher                 : Started Launcher in 2.003 seconds (process running for 3.929)
+2024-09-16T21:38:51.745-04:00  INFO 28928 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2024-09-16T21:38:58.736-04:00  INFO 28928 --- [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-16T21:38:58.737-04:00  INFO 28928 --- [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-16T21:38:58.739-04:00  INFO 28928 --- [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-16T21:38:58.766-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:58838
+2024-09-16T21:38:58.788-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=0:0:0:0:0:0:0:1
+2024-09-16T21:38:58.844-04:00  INFO 28928 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET/4.0.0.0
+2024-09-16T21:38:59.299-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wle2t1lp09eps9rv, client=0:0:0:0:0:0:0:1, payload={"resuming":true,"timeout":60000}
+2024-09-16T21:39:12.083-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wle2t1lp09eps9rv/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"6d538fabe9859209","endpoint":"newark5728.discord.media:443","sessionId":"b63c01ba05ea729b15b1694ee4e75f02"}}
+2024-09-16T21:39:12.101-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wle2t1lp09eps9rv/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"6d538fabe9859209","endpoint":"newark5728.discord.media:443","sessionId":"b63c01ba05ea729b15b1694ee4e75f02"}}
+2024-09-16T21:39:12.198-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:japanese bruh"
+2024-09-16T21:39:12.668-04:00  INFO 28928 --- [XNIO-1 task-2] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: japanese bruh
+2024-09-16T21:39:12.681-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ajapanese+bruh, client=0:0:0:0:0:0:0:1
+2024-09-16T21:39:12.718-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wle2t1lp09eps9rv/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":"QAAAngMADHlvb29vb29vb29vbwAEdG9mdQAAAAAAACr4AAtWS013Mml0OGRRWQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVZLTXcyaXQ4ZFFZAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9WS013Mml0OGRRWS9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA"}
+2024-09-16T21:39:12.718-04:00  WARN 28928 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.s.y.YoutubeAccessTokenTracker    : YouTube auth tokens can't be retrieved because email and password is not set in YoutubeAudioSourceManager, age restricted videos will throw exceptions.
+2024-09-16T21:39:13.064-04:00 ERROR 28928 --- [lava-daemon-pool-playback-1-thread-1] .s.d.l.s.y.YoutubeSignatureCipherManager : Problematic YouTube player script /s/player/3c3d6e4f/player_ias.vflset/en_US/base.js detected (issue detected with script: no n function match). Dumped to C:\Users\Brian\AppData\Local\Temp\lavaplayer-yt-player-script13239556339115098408.js
+2024-09-16T21:39:13.828-04:00  INFO 28928 --- [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/wle2t1lp09eps9rv/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":null}
+2024-09-16T21:39:13.807-04:00 ERROR 28928 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of VKMw2it8dQY
+
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:45) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:113) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$2(DefaultAudioPlayerManager.java:330) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.RuntimeException: Not success status code: 403
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.validateStatusCode(PersistentHttpStream.java:88) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:124) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:106) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.internalRead(PersistentHttpStream.java:158) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.read(PersistentHttpStream.java:174) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:271) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaEbmlReader.readEbmlInteger(MatroskaEbmlReader.java:39) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaFileReader.readNextElement(MatroskaFileReader.java:46) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.readFile(MatroskaStreamingFile.java:74) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:52) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:35) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:90) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStaticWithRetry(YoutubeAudioTrack.java:72) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:53) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:101) ~[lavaplayer-afec211f05c9dcf0b6ee44276a02f0316ea2458a-SNAPSHOT.jar!/:na]
+	... 4 common frames omitted
+
+2024-09-16T21:39:31.146-04:00  INFO 28928 --- [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:58838 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id wle2t1lp09eps9rv
+2024-09-16T21:40:25.431-04:00  INFO 28928 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.6.Final
+2024-09-16T21:40:25.434-04:00  INFO 28928 --- [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-16T21:40:25.435-04:00  INFO 28928 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2024-09-16 21:41:33.611  INFO 27560 --- [main] lavalink.server.Launcher                 : Starting Launcher using Java 17.0.1 on DESKTOP-JB2I1AD with PID 27560 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16 21:41:33.614  INFO 27560 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16 21:41:34.400  INFO 27560 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.227 seconds (JVM running for 1.642)
+2024-09-16 21:41:34.403  INFO 27560 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/lavalink-devs/Lavalink/issues/295
+2024-09-16 21:41:34.461  INFO 27560 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.7.12+red.1
+	Build time:     21.08.2024 22:57:54 UTC
+	Branch          patch/update-koe-v3
+	Commit:         2bce42e
+	Commit time:    21.08.2024 22:56:39 UTC
+	JVM:            17.0.1
+	Lavaplayer      1.5.4
+
+2024-09-16 21:41:34.469  INFO 27560 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16 21:41:35.102  WARN 27560 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2024-09-16 21:41:35.130  INFO 27560 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2024-09-16 21:41:35.130  INFO 27560 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 655 ms
+2024-09-16 21:41:35.195  WARN 27560 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2024-09-16 21:41:35.254  INFO 27560 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2024-09-16 21:41:35.368  WARN 27560 --- [main] l.s.config.AudioPlayerConfiguration      : The default Youtube source is now deprecated and won't receive further updates.
+You should use the new Youtube source plugin instead.
+https://github.com/lavalink-devs/youtube-source#plugin.
+To disable this warning, set 'lavalink.server.sources.youtube' to false in your application.yml.
+2024-09-16 21:41:35.780  INFO 27560 --- [main] lavalink.server.config.KoeConfiguration  : OS: WINDOWS, Arch: X86_64
+2024-09-16 21:41:35.780  INFO 27560 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
+2024-09-16 21:41:35.785  INFO 27560 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2024-09-16 21:41:35.841  INFO 27560 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2024-09-16 21:41:36.079  INFO 27560 --- [main] io.undertow                              : starting server: Undertow - 2.2.16.Final
+2024-09-16 21:41:36.085  INFO 27560 --- [main] org.xnio                                 : XNIO version 3.8.6.Final
+2024-09-16 21:41:36.093  INFO 27560 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.6.Final
+2024-09-16 21:41:36.143  INFO 27560 --- [main] org.jboss.threads                        : JBoss Threads version 3.1.0.Final
+2024-09-16 21:41:36.183  INFO 27560 --- [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port(s) 2333 (http)
+2024-09-16 21:41:36.188  INFO 27560 --- [main] lavalink.server.Launcher                 : Started Launcher in 1.779 seconds (JVM running for 3.429)
+2024-09-16 21:41:36.189  INFO 27560 --- [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2024-09-16 21:41:52.239  INFO 27560 --- [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.2.16.Final
+2024-09-16 21:41:52.244  INFO 27560 --- [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2024-09-16T21:47:46.522-04:00  INFO 26204 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 26204 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T21:47:46.525-04:00  INFO 26204 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:47:47.314-04:00  INFO 26204 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4/youtube-plugin-4.jar
+2024-09-16T21:47:50.887-04:00  WARN 26204 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2024-09-16T21:47:50.896-04:00  INFO 26204 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-16T21:47:50.917-04:00 ERROR 26204 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.0.7]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.0.7]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 25 common frames omitted
+Caused by: java.io.FileNotFoundException: https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4/youtube-plugin-4.jar
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1993) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[na:na]
+	at java.base/java.net.URL.openStream(URL.java:1161) ~[na:na]
+	at lavalink.server.bootstrap.PluginManager.downloadJar(PluginManager.kt:92) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:84) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:27) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 27 common frames omitted
+
+2024-09-16T21:48:36.355-04:00  INFO 24508 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 24508 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T21:48:36.358-04:00  INFO 24508 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:48:37.137-04:00  INFO 24508 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/v4/youtube-plugin-v4.jar
+2024-09-16T21:48:37.806-04:00  WARN 24508 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2024-09-16T21:48:37.813-04:00  INFO 24508 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-16T21:48:37.832-04:00 ERROR 24508 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.0.7]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.0.7]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 25 common frames omitted
+Caused by: java.io.FileNotFoundException: https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/v4/youtube-plugin-v4.jar
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1993) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[na:na]
+	at java.base/java.net.URL.openStream(URL.java:1161) ~[na:na]
+	at lavalink.server.bootstrap.PluginManager.downloadJar(PluginManager.kt:92) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:84) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:27) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 27 common frames omitted
+
+2024-09-16T21:53:19.524-04:00  INFO 25264 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 25264 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T21:53:19.527-04:00  INFO 25264 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:53:20.292-04:00  INFO 25264 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4.0.7/youtube-plugin-4.0.7.jar
+2024-09-16T21:53:21.056-04:00  WARN 25264 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2024-09-16T21:53:21.062-04:00  INFO 25264 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-16T21:53:21.079-04:00 ERROR 25264 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.0.7]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.0.7]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 25 common frames omitted
+Caused by: java.io.FileNotFoundException: https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4.0.7/youtube-plugin-4.0.7.jar
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1993) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[na:na]
+	at java.base/java.net.URL.openStream(URL.java:1161) ~[na:na]
+	at lavalink.server.bootstrap.PluginManager.downloadJar(PluginManager.kt:92) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:84) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:27) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 27 common frames omitted
+
+2024-09-16T21:56:02.059-04:00  INFO 5332 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 5332 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T21:56:02.062-04:00  INFO 5332 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:56:02.920-04:00  INFO 5332 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 1.321 seconds (process running for 1.759)
+2024-09-16T21:56:02.983-04:00  INFO 5332 --- [Lavalink] [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4.0.7
+	Build time:     08.07.2024 22:14:17 UTC
+	Branch          HEAD
+	Commit:         93102f8
+	Commit time:    08.07.2024 21:49:02 UTC
+	JVM:            17.0.1
+	Lavaplayer      2.2.1
+
+2024-09-16T21:56:02.991-04:00  INFO 5332 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T21:56:03.553-04:00  WARN 5332 --- [Lavalink] [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2024-09-16T21:56:03.572-04:00  INFO 5332 --- [Lavalink] [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2024-09-16T21:56:03.573-04:00  INFO 5332 --- [Lavalink] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 578 ms
+2024-09-16T21:56:03.666-04:00  INFO 5332 --- [Lavalink] [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2024-09-16T21:56:03.775-04:00  WARN 5332 --- [Lavalink] [main] l.s.config.AudioPlayerConfiguration      : The default Youtube source is now deprecated and won't receive further updates.
+You should use the new Youtube source plugin instead.
+https://github.com/lavalink-devs/youtube-source#plugin.
+To disable this warning, set 'lavalink.server.sources.youtube' to false in your application.yml.
+2024-09-16T21:56:04.174-04:00  INFO 5332 --- [Lavalink] [main] l.server.config.KoeConfiguration         : OS: WINDOWS, Arch: X86_64
+2024-09-16T21:56:04.174-04:00  INFO 5332 --- [Lavalink] [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2024-09-16T21:56:04.177-04:00  INFO 5332 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2024-09-16T21:56:04.271-04:00  INFO 5332 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2024-09-16T21:56:04.319-04:00  WARN 5332 --- [Lavalink] [main] l.server.config.SentryConfiguration      : Turning off sentry
+2024-09-16T21:56:04.541-04:00  INFO 5332 --- [Lavalink] [main] io.undertow                              : starting server: Undertow - 2.3.13.Final
+2024-09-16T21:56:04.550-04:00  INFO 5332 --- [Lavalink] [main] org.xnio                                 : XNIO version 3.8.8.Final
+2024-09-16T21:56:04.558-04:00  INFO 5332 --- [Lavalink] [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2024-09-16T21:56:04.611-04:00  INFO 5332 --- [Lavalink] [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-09-16T21:56:04.668-04:00  INFO 5332 --- [Lavalink] [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port 2333 (http) with context path '/'
+2024-09-16T21:56:04.674-04:00  INFO 5332 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 1.747 seconds (process running for 3.513)
+2024-09-16T21:56:04.675-04:00  INFO 5332 --- [Lavalink] [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2024-09-16T22:00:44.733-04:00  INFO 5332 --- [Lavalink] [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.13.Final
+2024-09-16T22:00:44.740-04:00  INFO 5332 --- [Lavalink] [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2024-09-16T22:00:48.979-04:00  INFO 26908 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 26908 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T22:00:48.982-04:00  INFO 26908 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T22:00:49.744-04:00  INFO 26908 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4.0.7/youtube-plugin-4.0.7.jar
+2024-09-16T22:00:50.466-04:00  WARN 26908 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2024-09-16T22:00:50.473-04:00  INFO 26908 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-16T22:00:50.491-04:00 ERROR 26908 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.0.7]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.0.7]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 25 common frames omitted
+Caused by: java.io.FileNotFoundException: https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4.0.7/youtube-plugin-4.0.7.jar
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1993) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[na:na]
+	at java.base/java.net.URL.openStream(URL.java:1161) ~[na:na]
+	at lavalink.server.bootstrap.PluginManager.downloadJar(PluginManager.kt:92) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:84) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:27) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 27 common frames omitted
+
+2024-09-16T22:04:12.868-04:00  INFO 18856 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 18856 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T22:04:12.872-04:00  INFO 18856 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T22:04:13.662-04:00  INFO 18856 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4.0.7/youtube-plugin-4.0.7.jar
+2024-09-16T22:04:14.307-04:00  WARN 18856 --- [Lavalink] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+2024-09-16T22:04:14.314-04:00  INFO 18856 --- [Lavalink] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-09-16T22:04:14.340-04:00 ERROR 18856 --- [Lavalink] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager': Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.9.jar!/:6.1.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.0.jar!/:3.3.0]
+	at lavalink.server.Launcher.launchPluginBootstrap(Launcher.kt:132) ~[classes!/:4.0.7]
+	at lavalink.server.Launcher.main(Launcher.kt:125) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Lavalink.jar:4.0.7]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[Lavalink.jar:4.0.7]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 25 common frames omitted
+Caused by: java.io.FileNotFoundException: https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/4.0.7/youtube-plugin-4.0.7.jar
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1993) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589) ~[na:na]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224) ~[na:na]
+	at java.base/java.net.URL.openStream(URL.java:1161) ~[na:na]
+	at lavalink.server.bootstrap.PluginManager.downloadJar(PluginManager.kt:92) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.manageDownloads(PluginManager.kt:84) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager.<init>(PluginManager.kt:27) ~[classes!/:4.0.7]
+	at lavalink.server.bootstrap.PluginManager$$SpringCGLIB$$0.<init>(<generated>) ~[classes!/:4.0.7]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.9.jar!/:6.1.9]
+	... 27 common frames omitted
+
+2024-09-16T22:06:23.154-04:00  INFO 3876 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 3876 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T22:06:23.157-04:00  INFO 3876 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T22:06:23.930-04:00  INFO 3876 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Downloading https://maven.lavalink.dev/releases/dev/lavalink/youtube/youtube-plugin/1.7.2/youtube-plugin-1.7.2.jar
+2024-09-16T22:06:25.534-04:00  INFO 3876 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Loaded youtube-plugin-1.7.2.jar (15 classes)
+2024-09-16T22:06:25.654-04:00  INFO 3876 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 2.94 seconds (process running for 3.382)
+2024-09-16T22:06:25.717-04:00  INFO 3876 --- [Lavalink] [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4.0.7
+	Build time:     08.07.2024 22:14:17 UTC
+	Branch          HEAD
+	Commit:         93102f8
+	Commit time:    08.07.2024 21:49:02 UTC
+	JVM:            17.0.1
+	Lavaplayer      2.2.1
+
+2024-09-16T22:06:25.727-04:00  INFO 3876 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T22:06:26.267-04:00  WARN 3876 --- [Lavalink] [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2024-09-16T22:06:26.287-04:00  INFO 3876 --- [Lavalink] [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2024-09-16T22:06:26.288-04:00  INFO 3876 --- [Lavalink] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 547 ms
+2024-09-16T22:06:26.693-04:00  INFO 3876 --- [Lavalink] [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2024-09-16T22:06:26.916-04:00  INFO 3876 --- [Lavalink] [main] d.l.youtube.plugin.YoutubePluginLoader   : YouTube source initialised with clients: WEB_REMIX, ANDROID_TESTSUITE, WEB, TVHTML5_SIMPLY_EMBEDDED_PLAYER 
+2024-09-16T22:06:27.046-04:00  INFO 3876 --- [Lavalink] [main] l.server.config.KoeConfiguration         : OS: WINDOWS, Arch: X86_64
+2024-09-16T22:06:27.047-04:00  INFO 3876 --- [Lavalink] [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2024-09-16T22:06:27.050-04:00  INFO 3876 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2024-09-16T22:06:27.158-04:00  INFO 3876 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2024-09-16T22:06:27.209-04:00  WARN 3876 --- [Lavalink] [main] l.server.config.SentryConfiguration      : Turning off sentry
+2024-09-16T22:06:27.455-04:00  INFO 3876 --- [Lavalink] [main] io.undertow                              : starting server: Undertow - 2.3.13.Final
+2024-09-16T22:06:27.465-04:00  INFO 3876 --- [Lavalink] [main] org.xnio                                 : XNIO version 3.8.8.Final
+2024-09-16T22:06:27.483-04:00  INFO 3876 --- [Lavalink] [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2024-09-16T22:06:27.538-04:00  INFO 3876 --- [Lavalink] [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-09-16T22:06:27.589-04:00  INFO 3876 --- [Lavalink] [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port 2333 (http) with context path '/'
+2024-09-16T22:06:27.594-04:00  INFO 3876 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 1.931 seconds (process running for 5.322)
+2024-09-16T22:06:27.595-04:00  INFO 3876 --- [Lavalink] [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2024-09-16T22:06:39.368-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-16T22:06:39.368-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-16T22:06:39.370-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-16T22:06:39.395-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:59263
+2024-09-16T22:06:39.410-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=0:0:0:0:0:0:0:1
+2024-09-16T22:06:39.457-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET/4.0.0.0
+2024-09-16T22:06:39.644-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/zdnd7n9nn4neu0u6, client=0:0:0:0:0:0:0:1, payload={"resuming":true,"timeout":60000}
+2024-09-16T22:06:51.777-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/zdnd7n9nn4neu0u6/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"3edd21f0b7d9897f","endpoint":"newark5728.discord.media:443","sessionId":"8985058c0765d60a9772cbcfff81808b"}}
+2024-09-16T22:06:51.799-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/zdnd7n9nn4neu0u6/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"3edd21f0b7d9897f","endpoint":"newark5728.discord.media:443","sessionId":"8985058c0765d60a9772cbcfff81808b"}}
+2024-09-16T22:06:51.820-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:slaying in roblox"
+2024-09-16T22:06:51.916-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] d.l.y.http.YoutubeAccessTokenTracker     : Updating YouTube visitor id succeeded, new one is CgtGOXpQOGtOdDlSQSi9yKO3BjIKCgJVUxIEGgAgDjoMCAEgvKvlm9GHufRm, next update will be after 600 seconds.
+2024-09-16T22:06:52.260-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: slaying in roblox
+2024-09-16T22:06:52.274-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3aslaying+in+roblox, client=0:0:0:0:0:0:0:1
+2024-09-16T22:06:52.307-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/zdnd7n9nn4neu0u6/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":"QAAA2gMARFJvYmxveCBTb25nIOKZqiAiU2xheWluZyBpbiBSb2Jsb3giIFJvYmxveCBQYXJvZHkgKFJvYmxveCBBbmltYXRpb24pAAhMT0dpbkhEaQAAAAAAA53IAAtUMGVIVHBPZWM3NAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVQwZUhUcE9lYzc0AQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9UMGVIVHBPZWM3NC9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA"}
+2024-09-16T22:07:16.569-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/zdnd7n9nn4neu0u6/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":null}
+2024-09-16T22:07:18.841-04:00  INFO 3876 --- [Lavalink] [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:59263 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id zdnd7n9nn4neu0u6

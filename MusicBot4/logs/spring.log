@@ -553,3 +553,138 @@ Caused by: java.io.FileNotFoundException: https://maven.lavalink.dev/releases/de
 2024-09-16T22:06:52.307-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/zdnd7n9nn4neu0u6/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":"QAAA2gMARFJvYmxveCBTb25nIOKZqiAiU2xheWluZyBpbiBSb2Jsb3giIFJvYmxveCBQYXJvZHkgKFJvYmxveCBBbmltYXRpb24pAAhMT0dpbkhEaQAAAAAAA53IAAtUMGVIVHBPZWM3NAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVQwZUhUcE9lYzc0AQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9UMGVIVHBPZWM3NC9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA"}
 2024-09-16T22:07:16.569-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/zdnd7n9nn4neu0u6/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":null}
 2024-09-16T22:07:18.841-04:00  INFO 3876 --- [Lavalink] [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:59263 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id zdnd7n9nn4neu0u6
+2024-09-16T22:39:08.166-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:59719
+2024-09-16T22:39:08.168-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=0:0:0:0:0:0:0:1
+2024-09-16T22:39:08.170-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET/4.0.0.0
+2024-09-16T22:39:08.334-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/b9tdi68k378gu21h, client=0:0:0:0:0:0:0:1, payload={"resuming":true,"timeout":60000}
+2024-09-16T22:39:19.346-04:00  INFO 3876 --- [Lavalink] [XNIO-1 I/O-7] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:59719 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id b9tdi68k378gu21h
+2024-09-16T22:39:41.290-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:59727
+2024-09-16T22:39:41.292-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=0:0:0:0:0:0:0:1
+2024-09-16T22:39:41.297-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET/4.0.0.0
+2024-09-16T22:39:41.683-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/3mnj3njbdo340myx, client=0:0:0:0:0:0:0:1, payload={"resuming":true,"timeout":60000}
+2024-09-16T22:39:45.338-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/3mnj3njbdo340myx/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"4d816659eb652214","endpoint":"newark5728.discord.media:443","sessionId":"84713bf7b0c6da2c1bc5ab8fbd0e1c42"}}
+2024-09-16T22:39:45.362-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/3mnj3njbdo340myx/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"4d816659eb652214","endpoint":"newark5728.discord.media:443","sessionId":"84713bf7b0c6da2c1bc5ab8fbd0e1c42"}}
+2024-09-16T22:39:45.373-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:slaying in roblox"
+2024-09-16T22:39:45.754-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: slaying in roblox
+2024-09-16T22:39:45.757-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3aslaying+in+roblox, client=0:0:0:0:0:0:0:1
+2024-09-16T22:39:45.785-04:00  INFO 3876 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/3mnj3njbdo340myx/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":"QAAA2gMARFJvYmxveCBTb25nIOKZqiAiU2xheWluZyBpbiBSb2Jsb3giIFJvYmxveCBQYXJvZHkgKFJvYmxveCBBbmltYXRpb24pAAhMT0dpbkhEaQAAAAAAA53IAAtUMGVIVHBPZWM3NAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVQwZUhUcE9lYzc0AQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9UMGVIVHBPZWM3NC9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA"}
+2024-09-16T22:39:58.556-04:00  INFO 3876 --- [Lavalink] [XNIO-1 I/O-6] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:59727 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id 3mnj3njbdo340myx
+2024-09-16T23:06:01.274-04:00  INFO 3876 --- [Lavalink] [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.13.Final
+2024-09-16T23:06:01.277-04:00  INFO 3876 --- [Lavalink] [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-16T23:06:01.278-04:00  INFO 3876 --- [Lavalink] [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2024-09-16T23:06:04.928-04:00  INFO 31608 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 31608 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T23:06:04.931-04:00  INFO 31608 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T23:06:05.697-04:00  INFO 31608 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Found plugin 'youtube-plugin' version 1.7.2
+2024-09-16T23:06:05.722-04:00  INFO 31608 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Loaded youtube-plugin-1.7.2.jar (15 classes)
+2024-09-16T23:06:05.855-04:00  INFO 31608 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 1.356 seconds (process running for 1.792)
+2024-09-16T23:06:05.929-04:00  INFO 31608 --- [Lavalink] [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4.0.7
+	Build time:     08.07.2024 22:14:17 UTC
+	Branch          HEAD
+	Commit:         93102f8
+	Commit time:    08.07.2024 21:49:02 UTC
+	JVM:            17.0.1
+	Lavaplayer      2.2.1
+
+2024-09-16T23:06:05.940-04:00  INFO 31608 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T23:06:06.510-04:00  WARN 31608 --- [Lavalink] [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2024-09-16T23:06:06.532-04:00  INFO 31608 --- [Lavalink] [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2024-09-16T23:06:06.533-04:00  INFO 31608 --- [Lavalink] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 588 ms
+2024-09-16T23:06:07.036-04:00  INFO 31608 --- [Lavalink] [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2024-09-16T23:06:07.267-04:00  INFO 31608 --- [Lavalink] [main] d.l.youtube.plugin.YoutubePluginLoader   : YouTube source initialised with clients: WEB_REMIX 
+2024-09-16T23:06:07.400-04:00  INFO 31608 --- [Lavalink] [main] l.server.config.KoeConfiguration         : OS: WINDOWS, Arch: X86_64
+2024-09-16T23:06:07.400-04:00  INFO 31608 --- [Lavalink] [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2024-09-16T23:06:07.403-04:00  INFO 31608 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2024-09-16T23:06:07.663-04:00  INFO 31608 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2024-09-16T23:06:07.716-04:00  WARN 31608 --- [Lavalink] [main] l.server.config.SentryConfiguration      : Turning off sentry
+2024-09-16T23:06:07.942-04:00  INFO 31608 --- [Lavalink] [main] io.undertow                              : starting server: Undertow - 2.3.13.Final
+2024-09-16T23:06:07.950-04:00  INFO 31608 --- [Lavalink] [main] org.xnio                                 : XNIO version 3.8.8.Final
+2024-09-16T23:06:07.957-04:00  INFO 31608 --- [Lavalink] [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2024-09-16T23:06:08.011-04:00  INFO 31608 --- [Lavalink] [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-09-16T23:06:08.061-04:00  INFO 31608 --- [Lavalink] [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port 2333 (http) with context path '/'
+2024-09-16T23:06:08.066-04:00  INFO 31608 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 2.204 seconds (process running for 4.003)
+2024-09-16T23:06:08.067-04:00  INFO 31608 --- [Lavalink] [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2024-09-16T23:06:13.220-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-16T23:06:13.220-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-16T23:06:13.221-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-16T23:06:13.242-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60080
+2024-09-16T23:06:13.260-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=0:0:0:0:0:0:0:1
+2024-09-16T23:06:13.307-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET/4.0.0.0
+2024-09-16T23:06:13.497-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/idtgqq0826v06xe4, client=0:0:0:0:0:0:0:1, payload={"resuming":true,"timeout":60000}
+2024-09-16T23:06:23.670-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/idtgqq0826v06xe4/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"83877b1bf6ff8821","endpoint":"newark5728.discord.media:443","sessionId":"7c16478928cd65d900d03fa91a4feef9"}}
+2024-09-16T23:06:23.690-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/idtgqq0826v06xe4/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"83877b1bf6ff8821","endpoint":"newark5728.discord.media:443","sessionId":"7c16478928cd65d900d03fa91a4feef9"}}
+2024-09-16T23:06:23.711-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:japanese bruh"
+2024-09-16T23:06:23.714-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] lavalink.server.player.AudioLoader       : No matches found
+2024-09-16T23:06:23.726-04:00  INFO 31608 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ajapanese+bruh, client=0:0:0:0:0:0:0:1
+2024-09-16T23:06:35.647-04:00  INFO 31608 --- [Lavalink] [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60080 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id idtgqq0826v06xe4
+2024-09-16T23:06:52.293-04:00  INFO 31608 --- [Lavalink] [SpringApplicationShutdownHook] io.undertow                              : stopping server: Undertow - 2.3.13.Final
+2024-09-16T23:06:52.295-04:00  INFO 31608 --- [Lavalink] [SpringApplicationShutdownHook] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-16T23:06:52.297-04:00  INFO 31608 --- [Lavalink] [SpringApplicationShutdownHook] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2024-09-16T23:06:57.384-04:00  INFO 24984 --- [Lavalink] [main] lavalink.server.Launcher                 : Starting Launcher v4.0.7 using Java 17.0.1 with PID 24984 (E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4\Lavalink.jar started by Brian in E:\Visual Studio Projects\source\MusicBot4.0\MusicBot4)
+2024-09-16T23:06:57.387-04:00  INFO 24984 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T23:06:58.204-04:00  INFO 24984 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Found plugin 'youtube-plugin' version 1.7.2
+2024-09-16T23:06:58.229-04:00  INFO 24984 --- [Lavalink] [main] l.server.bootstrap.PluginManager         : Loaded youtube-plugin-1.7.2.jar (15 classes)
+2024-09-16T23:06:58.378-04:00  INFO 24984 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 1.435 seconds (process running for 1.869)
+2024-09-16T23:06:58.449-04:00  INFO 24984 --- [Lavalink] [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        4.0.7
+	Build time:     08.07.2024 22:14:17 UTC
+	Branch          HEAD
+	Commit:         93102f8
+	Commit time:    08.07.2024 21:49:02 UTC
+	JVM:            17.0.1
+	Lavaplayer      2.2.1
+
+2024-09-16T23:06:58.458-04:00  INFO 24984 --- [Lavalink] [main] lavalink.server.Launcher                 : No active profile set, falling back to 1 default profile: "default"
+2024-09-16T23:06:59.041-04:00  WARN 24984 --- [Lavalink] [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2024-09-16T23:06:59.063-04:00  INFO 24984 --- [Lavalink] [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2024-09-16T23:06:59.064-04:00  INFO 24984 --- [Lavalink] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 600 ms
+2024-09-16T23:06:59.653-04:00  INFO 24984 --- [Lavalink] [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2024-09-16T23:06:59.920-04:00  INFO 24984 --- [Lavalink] [main] d.l.youtube.plugin.YoutubePluginLoader   : YouTube source initialised with clients: WEB_REMIX, WEB 
+2024-09-16T23:07:00.056-04:00  INFO 24984 --- [Lavalink] [main] l.server.config.KoeConfiguration         : OS: WINDOWS, Arch: X86_64
+2024-09-16T23:07:00.056-04:00  INFO 24984 --- [Lavalink] [main] l.server.config.KoeConfiguration         : Enabling JDA-NAS
+2024-09-16T23:07:00.059-04:00  INFO 24984 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
+2024-09-16T23:07:00.093-04:00  INFO 24984 --- [Lavalink] [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
+2024-09-16T23:07:00.145-04:00  WARN 24984 --- [Lavalink] [main] l.server.config.SentryConfiguration      : Turning off sentry
+2024-09-16T23:07:00.384-04:00  INFO 24984 --- [Lavalink] [main] io.undertow                              : starting server: Undertow - 2.3.13.Final
+2024-09-16T23:07:00.392-04:00  INFO 24984 --- [Lavalink] [main] org.xnio                                 : XNIO version 3.8.8.Final
+2024-09-16T23:07:00.401-04:00  INFO 24984 --- [Lavalink] [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.8.8.Final
+2024-09-16T23:07:00.456-04:00  INFO 24984 --- [Lavalink] [main] org.jboss.threads                        : JBoss Threads version 3.5.0.Final
+2024-09-16T23:07:00.502-04:00  INFO 24984 --- [Lavalink] [main] o.s.b.w.e.undertow.UndertowWebServer     : Undertow started on port 2333 (http) with context path '/'
+2024-09-16T23:07:00.507-04:00  INFO 24984 --- [Lavalink] [main] lavalink.server.Launcher                 : Started Launcher in 2.122 seconds (process running for 3.999)
+2024-09-16T23:07:00.508-04:00  INFO 24984 --- [Lavalink] [main] lavalink.server.Launcher                 : Lavalink is ready to accept connections.
+2024-09-16T23:07:04.895-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-16T23:07:04.896-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-16T23:07:04.898-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-16T23:07:04.930-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:60097
+2024-09-16T23:07:04.950-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : GET /v4/websocket, client=0:0:0:0:0:0:0:1
+2024-09-16T23:07:05.000-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from Lavalink4NET/4.0.0.0
+2024-09-16T23:07:05.253-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk, client=0:0:0:0:0:0:0:1, payload={"resuming":true,"timeout":60000}
+2024-09-16T23:07:11.422-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"83877b1bf6ff8821","endpoint":"newark5728.discord.media:443","sessionId":"7c16478928cd65d900d03fa91a4feef9"}}
+2024-09-16T23:07:11.459-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:japanese bruh"
+2024-09-16T23:07:11.500-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"83877b1bf6ff8821","endpoint":"newark5728.discord.media:443","sessionId":"7c16478928cd65d900d03fa91a4feef9"}}
+2024-09-16T23:07:12.233-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-3] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: japanese bruh
+2024-09-16T23:07:12.249-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : GET /v4/loadtracks?identifier=ytsearch%3ajapanese+bruh, client=0:0:0:0:0:0:0:1
+2024-09-16T23:07:12.283-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":"QAAAngMADHlvb29vb29vb29vbwAEdG9mdQAAAAAAACr4AAtWS013Mml0OGRRWQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVZLTXcyaXQ4ZFFZAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9WS013Mml0OGRRWS9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA"}
+2024-09-16T23:07:25.124-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1
+2024-09-16T23:07:31.387-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"dd20226e0e29c778","endpoint":"newark5728.discord.media:443","sessionId":"c56a6d239531437445932c29a5cae24f"}}
+2024-09-16T23:07:31.391-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-3] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"voice":{"token":"dd20226e0e29c778","endpoint":"newark5728.discord.media:443","sessionId":"c56a6d239531437445932c29a5cae24f"}}
+2024-09-16T23:07:31.392-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":"QAAAngMADHlvb29vb29vb29vbwAEdG9mdQAAAAAAACr4AAtWS013Mml0OGRRWQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVZLTXcyaXQ4ZFFZAQAwaHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9WS013Mml0OGRRWS9tcWRlZmF1bHQuanBnAAAHeW91dHViZQAAAAAAAAAA"}
+2024-09-16T23:07:42.093-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : PATCH /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1, payload={"encodedTrack":null}
+2024-09-16T23:07:45.980-04:00  INFO 24984 --- [Lavalink] [XNIO-1 task-2] l.server.io.RequestLoggingFilter         : DELETE /v4/sessions/n7t9kxc5h8nk9kxk/players/926987371549950012, client=0:0:0:0:0:0:0:1
+2024-09-16T23:07:47.385-04:00  INFO 24984 --- [Lavalink] [XNIO-1 I/O-10] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:60097 with status CloseStatus[code=1006, reason=] -- Session can be resumed within the next 60000 seconds with id n7t9kxc5h8nk9kxk

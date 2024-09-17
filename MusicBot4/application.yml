@@ -13,9 +13,7 @@ plugins:
     # Clients are queried in the order they are given (so the first client is queried first and so on...)
     clients:
       - MUSIC
-      - ANDROID_TESTSUITE
       - WEB
-      - TVHTML5EMBEDDED
 lavalink:
   plugins:
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.7.2" # required, the coordinates of your plugin

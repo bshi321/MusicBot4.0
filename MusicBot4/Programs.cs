@@ -41,8 +41,8 @@ public class Programs
         RunAsync().GetAwaiter().GetResult();
     }
 
-    private static ServiceProvider BuildServiceProvider() { 
-        string discordToken = Environment.GetEnvironmentVariable("DISCORD_API_TOKEN")
+    private static ServiceProvider BuildServiceProvider() {
+        string discordToken = Environment.GetEnvironmentVariable("DISCORD_API_TOKEN");
         return new ServiceCollection()
         .AddSingleton<DiscordClient>()
         .AddSingleton(new DiscordConfiguration

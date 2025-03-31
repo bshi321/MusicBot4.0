@@ -28,4 +28,8 @@
     <ProjectReference Include="..\DiscordDb\DiscordDb.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="plugins\" />
+  </ItemGroup>
+
 </Project>
